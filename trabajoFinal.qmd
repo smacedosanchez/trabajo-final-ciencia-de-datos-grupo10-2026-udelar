@@ -1,0 +1,8 @@
+---
+title: "Trabajo Final CDR 2026"
+format: html
+editor: visual
+author: Hugo Selma, Santiago Macedo
+---
+
+## 
