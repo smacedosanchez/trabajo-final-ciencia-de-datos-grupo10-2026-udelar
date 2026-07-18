@@ -5,4 +5,207 @@ editor: visual
 author: Hugo Selma, Santiago Macedo
 ---
 
-## 
+# Introducción
+
+El fenomeno de interés que elegimos para estudiar en este trabajo es la salud mental de personas durante la pandemia (2020). Se exploraran las posibles relaciones que existen entre su salud mental, medida por varias escalas psicologicas como el BDI, STAI, etc, con ciertas caracteristicas de su estilo de vida, nivel socioeconomico, lugar de residencia, etc.
+
+En el siguiente chunk cargamos las librerias necesarias para poder correr el código:
+
+```{r}
+library(tidyverse)
+library(readxl)
+library(plotly)
+library(GGally)
+```
+
+# Datos
+
+Los datos pertencen a una encuesta realizada durante la pandemia, con 1059 filas y 375 columnas de las cuales vamos a conservar 53 variables que son las mas relevantes para nuestro analisis. Entre ellas tenemos:
+
+| Variable | Tipo | Descripción |
+|-----------------------------------|----------------|----------------------|
+| **Demografía** |  |  |
+| `Sexo` | Categórica (0/1) | Sexo del participante |
+| `Edad` | Numérica | Edad en años |
+| `Departamento` | Categórica | Departamento de residencia |
+| `Educacion` | Categórica ordinal | Nivel educativo alcanzado |
+| `Trabajo.recod` | Categórica | Situación laboral (recodificada) |
+| `Salud` | Categórica | Autopercepción del estado de salud |
+| `Desempleo.ahora` | Categórica | Cambio en situación de empleo durante la cuarentena |
+| **Condiciones de aislamiento** |  |  |
+| `Tipo.aislamiento.recod` | Categórica | Con quién convive durante el aislamiento (solo/pareja/familia/etc.) |
+| `Dias.aislamiento` | Numérica | Días acumulados de aislamiento al momento de responder |
+| `Horas.aislamiento` | Numérica | Horas diarias en aislamiento |
+| `Solo.cuarentena`, `Pareja.cuarentena`, `Familia.cuarentena`, `Amigos.cuarentena`, `Hijos.cuarentena` | Dummy (0/1) c/u | Convivencia con cada tipo de conviviente |
+| `Teletrabajo` | Categórica | Modalidad de trabajo durante la cuarentena |
+| `Cuantas.personas` | Numérica | Cantidad de convivientes |
+| `Aire.libre` | Dummy (0/1) | Acceso a espacio al aire libre en la vivienda |
+| `Metros` | Numérica | Metros cuadrados de la vivienda (limpiada — ver Sección de limpieza) |
+| `Mt.persona` | Numérica | Metros cuadrados por persona conviviente |
+| `Fisica.antes`, `Fisica.ahora` | Numérica | Frecuencia de actividad física, antes y durante la cuarentena |
+| **Contexto socioeconómico** |  |  |
+| `INSE` | Numérica | Índice de Nivel Socioeconómico (calculado) |
+| `INSE.Cat` | Categórica ordinal | Categoría del INSE (nivel socioeconómico) |
+| `Personas.hogar` | Numérica | Cantidad de personas en el hogar |
+| `Ingresos` | Categórica ordinal | Tramo de ingresos del hogar |
+| `Ingresos.INSE` | Numérica | Ingresos ponderados para el índice INSE |
+| `Estudios.sostenedor` | Categórica ordinal | Nivel educativo del sostén del hogar |
+| `Cobertura.sostenedor` | Categórica | Cobertura de salud del sostén del hogar |
+| `Baños`, `Automovil`, `TV`, `Heladera`, `Domestico` | Numérica/Dummy | Indicadores de bienes/servicios del hogar (insumos del INSE) |
+| **Condiciones de salud preexistentes** |  |  |
+| `Asma`, `EPOC`, `Hipertension`, `Cardiacas`, `Diabetes`, `Inmunodepresion`, `Trastornos.mentales`, `Ninguna` | Dummy (0/1) c/u | Condiciones de salud autorreportadas |
+| **Variables de resultado — salud mental** |  |  |
+| `BDI` | Numérica (0-63) | Puntaje total del Inventario de Depresión de Beck |
+| `BDI.Cat` | Categórica ordinal | Categoría de severidad de depresión (mínima/leve/moderada/severa) |
+| `STAI.E` | Numérica (0-60) | Ansiedad estado (STAI) |
+| `STAI.E.Cat` | Categórica ordinal | Categoría de ansiedad estado |
+| `STAI.R` | Numérica (0-60) | Ansiedad rasgo (STAI) |
+| `STAI.R.Cat` | Categórica ordinal | Categoría de ansiedad rasgo |
+| `SA.ANS`, `SA.DEP` | Numérica | Subescalas de ansiedad y depresión del SA-90 |
+| `HS` | Numérica (0-20) | Puntaje de desesperanza (Escala de desesperanza de Beck) |
+| `HS.Cat` | Categórica ordinal | Categoría de desesperanza |
+| **Temporal** |  |  |
+| `Semana` | Numérica | Semana de la cuarentena en que se respondió la encuesta |
+
+Los datos ya estaban procesados de entrada, por ejemplo, habian variables recodificadas que, como no presentan una perdida de información comparandolas a como estaban antes, las utilizamos en vez de las originales. Desconocemos el proposito original de la recodificacion. En este chunk nos quedamos con las variables mas relevantes para el analisis y eliminamos respuestas repetidas. Por privacidad, excluimos las direcciones de correo electrónico de los participantes, solo los utilizamos para retirar las respuestas repetidas. También corregimos datos de tamaño de vivienda como por ejemplo una vivienda de 10000 m2 en Montevideo, que pusimos como NA y luego cambiamos NA de las variables salud y desempleo, que por la estructura de la encuesta las transformamos en "No aplica". Corrimos este codigo solo una vez y luego, creamos un nuevo csv ya limpio para poder subir a Github sin problemas:
+
+```{r}
+datos <- read_xlsx("datos trabajo final.xlsx", sheet = "Base datos columnas primera tom")
+
+datos_limpio <- datos %>%
+  arrange(Marcatemporal) %>%
+  distinct(Email, .keep_all = TRUE) %>%
+  mutate(
+    Metros = case_when(
+      Metros > 5000 & Departamento %in% c("MONTEVIDEO", "CANELONES") ~ NA_real_,
+      Metros > 15000 ~ NA_real_,
+      TRUE ~ Metros
+    ),
+    Mt.persona = ifelse(is.na(Metros), NA_real_, Mt.persona),
+    Salud = ifelse(is.na(Salud), "No aplica", as.character(Salud)),
+    Desempleo.ahora = ifelse(is.na(Desempleo.ahora), "No aplica", as.character(Desempleo.ahora))
+  ) %>%
+  select(
+    Sexo, Edad, Departamento, Educacion, Trabajo.recod, Salud, Desempleo.ahora,
+    Tipo.aislamiento.recod, Dias.aislamiento, Horas.aislamiento,
+    Solo.cuarentena, Pareja.cuarentena, Familia.cuarentena, Amigos.cuarentena, Hijos.cuarentena,
+    Teletrabajo, Cuantas.personas, Aire.libre, Metros, Mt.persona,
+    Fisica.antes, Fisica.ahora,
+    INSE, INSE.Cat, Personas.hogar, Ingresos, Ingresos.INSE,
+    Estudios.sostenedor, Cobertura.sostenedor, Baños, Automovil, TV, Heladera, Domestico,
+    Asma, EPOC, Hipertension, Cardiacas, Diabetes, Inmunodepresion, Trastornos.mentales, Ninguna,
+    BDI, BDI.Cat, STAI.E, STAI.E.Cat, STAI.R, STAI.R.Cat, SA.ANS, SA.DEP, HS, HS.Cat,
+    Semana
+  )
+
+write_csv(datos_limpio, "datos_limpios.csv")
+
+```
+
+Obviamente el código anterior no sería reproducible, pero a partir de ahora utilizaremos solo el csv nuevo sin los email y sin las variables que no nos interesan.
+
+# Análisis Exploratorio
+
+#### Para comenzar, vamos a analizar a la poblacion de nuestra encuesta, para ver datos de sus edades, sexo, INSE y zona geografica con sus respectivas visualizaciones.
+
+```{r}
+datos_limpio <- read_csv("datos_limpios.csv")
+# Resumen numérico de edad e INSE
+datos_limpio %>%
+  summarise(
+    edad_media = mean(Edad), edad_mediana = median(Edad), edad_sd = sd(Edad),
+    inse_media = mean(INSE), inse_mediana = median(INSE), inse_sd = sd(INSE)
+  )
+
+# Distribución de sexo
+datos_limpio %>%
+  count(Sexo) %>%
+  mutate(porcentaje = round(100 * n / sum(n), 1))
+
+# Distribución de INSE.Cat
+datos_limpio %>%
+  count(INSE.Cat) %>%
+  mutate(porcentaje = round(100 * n / sum(n), 1))
+```
+
+```{r}
+# Visualización: edad
+ggplot(datos_limpio, aes(x = Edad)) +
+  geom_histogram(binwidth = 5, fill = "steelblue", color = "white") +
+  labs(x = "Edad", y = "Cantidad") + 
+  theme_minimal()
+
+# Visualización: sexo
+ggplot(datos_limpio, aes(x = factor(Sexo))) +
+  geom_bar(fill = "steelblue") +
+  labs(x = "Sexo", y = "Cantidad") +
+  theme_minimal()
+
+# Visualización: nivel socioeconómico
+ggplot(datos_limpio, aes(x = factor(INSE.Cat))) +
+  geom_bar(fill = "steelblue") +
+  labs(x = "Categoría de INSE", y = "Cantidad") +
+  theme_minimal()
+```
+
+```{r}
+#Distribución geográfica
+datos_limpio <- datos_limpio %>%
+  mutate(
+    Zona = if_else(Departamento == "MONTEVIDEO", "Montevideo", "Interior")
+  )
+
+datos_limpio %>%
+  count(Zona) %>%
+  mutate(porcentaje = round(100 * n / sum(n), 1))
+```
+
+```{r}
+ggplot(datos_limpio, aes(x = Zona, fill = Zona)) +
+  geom_bar(show.legend = FALSE) +
+  geom_text(stat = "count", aes(label = after_stat(count)), vjust = -0.5) +
+  labs(x = "Zona", y = "Cantidad de personas") +
+  theme_minimal()
+```
+
+La edad media es de 37.4 años, la mediana son 35 años y el rango va desde 18 años hasta 80.
+
+En la muestra hay una alta proporcion de mujeres, siendo un 79% de mujeres.
+
+El INSE ([Índice de Nivel Socioeconómico](http://www.ceismu.org/site/wp-content/uploads/INSE-Informe-2023.pdf)) se concentra en las categorias medias altas, concentrandose el 57% de la muestra entre la categoría 4 y la 5, con muy poca gente en los extremos.
+
+La mayoria de gente (66.4%) es de Montevideo. El resto, pertenece al interior. Como en algunos departamentos habian muy pocas observaciones, decidimos agruparlos en Montevideo vs Interior para que quedaran dos grupos bien diferenciados con una buena cantidad de observaciones.
+
+#### Lo siguiente será hacer un resumen de las 4 escalas utilizadas, BDI, STAI.E (ansiedad estado), STAI.R, (ansiedad rasgo) y HS.
+
+```{r}
+# Tabla resumen de las 4 escalas
+datos_limpio %>%
+  select(BDI, STAI.E, STAI.R, HS) %>%
+  pivot_longer(everything(), names_to = "escala", values_to = "puntaje") %>%
+  group_by(escala) %>%
+  summarise(media = mean(puntaje), mediana = median(puntaje),
+            sd = sd(puntaje), min = min(puntaje), max = max(puntaje))
+```
+
+```{r}
+# Distribución de las categorías clínicas 
+datos_limpio %>%
+  select(BDI.Cat, STAI.E.Cat, STAI.R.Cat, HS.Cat) %>%
+  pivot_longer(everything(), names_to = "escala", values_to = "categoria") %>%
+  count(escala, categoria) %>%
+  group_by(escala) %>%
+  mutate(porcentaje = round(100 * n / sum(n), 1))
+```
+
+```{r}
+# Visualización de las 4 distribuciones en un solo panel
+datos_limpio %>%
+  select(BDI, STAI.E, STAI.R, HS) %>%
+  pivot_longer(everything(), names_to = "escala", values_to = "puntaje") %>%
+  ggplot(aes(x = puntaje)) +
+  geom_histogram(bins = 20, fill = "steelblue", color = "white") +
+  facet_wrap(~escala, scales = "free") +
+  labs(x = "Puntaje", y = "Cantidad")
+  theme_minimal()
+```
