@@ -1,0 +1,2310 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Hugo Selma, Santiago Macedo">
+
+<title>Trabajo Final CDR 2026</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="trabajoFinal_files/libs/clipboard/clipboard.min.js"></script>
+<script src="trabajoFinal_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="trabajoFinal_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="trabajoFinal_files/libs/quarto-html/popper.min.js"></script>
+<script src="trabajoFinal_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="trabajoFinal_files/libs/quarto-html/anchor.min.js"></script>
+<link href="trabajoFinal_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="trabajoFinal_files/libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="trabajoFinal_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="trabajoFinal_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="trabajoFinal_files/libs/bootstrap/bootstrap-efbb37e9afcc02144ebbc7afd12a776f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Trabajo Final CDR 2026</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Hugo Selma, Santiago Macedo </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introducción" class="level1">
+<h1>Introducción</h1>
+<p>El fenomeno de interés que elegimos para estudiar en este trabajo es la salud mental de personas durante la pandemia (2020). Se exploraran las posibles relaciones que existen entre su salud mental, medida por varias escalas psicologicas como el BDI, STAI, etc, con ciertas caracteristicas de su estilo de vida, nivel socioeconomico, lugar de residencia, etc.</p>
+<p>El estudio se realizó a través de un formulario online que circuló por redes sociales, páginas institucionales de la UdelaR, y se difundió a través de medios de prensa. Se realizaron las gestiones pertinentes ante el Comité de Ética en Investigación de la FP-UdelaR, obteniéndose las aprobaciones correspondientes.</p>
+<p>La recogida de datos se realizó entre el 30/5 y el 20/7 del 2020, obteniéndose un total de 1059 respuestas. Se convocó a participar a personas residentes en Uruguay de 18 años o más, que no tuvieran patologías psiquiátricas graves, discapacidad intelectual o intentos de suicidio recientes. A las mismas, se les aplicó un cuestionario online que evaluaba diversas variables sociodemográficas, condiciones en las vive la pandemia, condiciones de la vivienda, convivientes, patologías asociadas a mayor riesgo de COVID, actividades que realiza, nivel educativo, consumo de sustancias, entre otras. Además, se aplicaron diversos instrumentos estandarizados: INSE (Índice de nivel socioeconómico), BDI-II (Inventario de depresión de Beck), STAI (Inventario de ansiedad estado-rasgo) y HS (Escala de desesperanza), entre otras.</p>
+<p>Dichas escalas evalúan el nivel socioeconómico, síntomas de depresión, síntomas de ansiedad (actual y a medio plazo), y la desesperanza que es un predictor de riesgo suicida. De la enorme cantidad de variables estudiadas, se hará un recorte adecuado al trabajo que estamos realizando.</p>
+<p>El objetivo del trabajo es describir los indicadores de depresión, ansiedad y desesperanza observados en una muestra de adultos durante la pandemia de COVID-19 y explorar su relación con características sociodemográficas, socioeconómicas, condiciones de aislamiento y cambios en la actividad física.</p>
+<p>Una vez descritas las principales características de la muestra, el análisis se organiza en torno a cuatro preguntas. En primer lugar, se examina la distribución de los puntajes de depresión, ansiedad y desesperanza, así como la proporción de participantes incluida en cada categoría clínica. A continuación, se exploran posibles diferencias según sexo y zona de residencia. En tercer lugar, se analiza la relación entre el nivel socioeconómico y los indicadores de salud mental. Finalmente, se estudia la relación de estos indicadores con los cambios en la actividad física y con la modalidad de aislamiento.</p>
+<p>Se analizan 4 escalas que evalúan síntomas psicopatológicos, relacionados con problemas de salud mental de gran prevalencia (depresión -BDI- y ansiedad estado y rasgo -STAI.E y STAI.R) así como la escala de desesperanza que es un predictor de riesgo suicida (HS). Luego además, se establece una categorización de dichos puntajes en función de su significación clínica, a saber:</p>
+<ul>
+<li><p>BDI-Cat: 0, sin depresión; 1, depresión clínica.</p></li>
+<li><p>STAI.E.Cat: 0, ansiedad “normal”; 1, ansiedad en rango clínico.</p></li>
+<li><p>STAI.R.Cat: 0, ansiedad “normal”; 1, ansiedad en rango clínico.</p></li>
+<li><p>HS.Cat: 0, Ninguna; 1 leve; 2, moderada; 3 alta.</p></li>
+</ul>
+<p>los análisis de intensidad y asociación se utilizan los puntajes de las escalas (BDI, STAI.E, STAI.R y HS), debido a que conservan toda la variabilidad de las respuestas. Las variables categorizadas se utilizan para describir la proporción de participantes ubicada en los diferentes niveles clínicos. Estas categorías representan niveles de sintomatología derivados de escalas de autorreporte y no equivalen, por sí solas, a un diagnóstico clínico.</p>
+<p>Buscaremos responder a las siguientes preguntas:</p>
+<ol type="1">
+<li><p>¿Cómo se distribuyen la depresión, la ansiedad y la desesperanza en la muestra?</p></li>
+<li><p>¿Existen diferencias en estos indicadores según sexo y zona de residencia?</p></li>
+<li><p>¿Qué relación existe entre nivel socioeconómico y salud mental?</p></li>
+<li><p>¿La reducción de la actividad física y las condiciones de aislamiento se relacionan con peores indicadores de salud mental?</p></li>
+</ol>
+<p>En el siguiente chunk cargamos las librerias necesarias para poder correr el código:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotly)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(GGally)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="datos" class="level1">
+<h1>Datos</h1>
+<p>Los datos pertencen a una encuesta realizada durante la pandemia.</p>
+<p>La base original contenía 1.059 respuestas y 375 variables. Para proteger la privacidad de los participantes, se eliminaron los correos electrónicos y todas las variables que permitieran identificarlos. También se identificaron seis participantes que habían respondido dos veces, conservándose cronológicamente la primera respuesta de cada uno. Se seleccionaron las 53 variables relevantes para los objetivos del trabajo y se revisaron valores extremos e inconsistentes. Como resultado, se obtuvo una base anonimizada de 1.053 participantes y 53 variables. Todos los análisis presentados a continuación parten de esta base anonimizada.</p>
+<p>Entre ellas tenemos:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Tipo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Demografía</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>Sexo</code></td>
+<td>Categórica (0/1)</td>
+<td>Sexo del participante</td>
+</tr>
+<tr class="odd">
+<td><code>Edad</code></td>
+<td>Numérica</td>
+<td>Edad en años</td>
+</tr>
+<tr class="even">
+<td><code>Departamento</code></td>
+<td>Categórica</td>
+<td>Departamento de residencia</td>
+</tr>
+<tr class="odd">
+<td><code>Educacion</code></td>
+<td>Categórica ordinal</td>
+<td>Nivel educativo alcanzado</td>
+</tr>
+<tr class="even">
+<td><code>Trabajo.recod</code></td>
+<td>Categórica</td>
+<td>Situación laboral (recodificada)</td>
+</tr>
+<tr class="odd">
+<td><code>Salud</code></td>
+<td>Categórica</td>
+<td>Si trabaja en el sector salud, y en qué área.</td>
+</tr>
+<tr class="even">
+<td><code>Desempleo.ahora</code></td>
+<td>Categórica</td>
+<td>Si perdió el empleo durante la cuarentena.</td>
+</tr>
+<tr class="odd">
+<td><strong>Condiciones de aislamiento</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>Tipo.aislamiento.recod</code></td>
+<td>Categórica</td>
+<td>Modalidad o grado de aislamiento realizado</td>
+</tr>
+<tr class="odd">
+<td><code>Dias.aislamiento</code></td>
+<td>Numérica</td>
+<td>Días acumulados de aislamiento al momento de responder</td>
+</tr>
+<tr class="even">
+<td><code>Horas.aislamiento</code></td>
+<td>Numérica</td>
+<td>Horas diarias en aislamiento</td>
+</tr>
+<tr class="odd">
+<td><code>Solo.cuarentena</code>, <code>Pareja.cuarentena</code>, <code>Familia.cuarentena</code>, <code>Amigos.cuarentena</code>, <code>Hijos.cuarentena</code></td>
+<td>Dummy (0/1) c/u</td>
+<td>Convivencia con cada tipo de conviviente durante la cuarentena.</td>
+</tr>
+<tr class="even">
+<td><code>Teletrabajo</code></td>
+<td>Categórica</td>
+<td>Modalidad de trabajo durante la cuarentena</td>
+</tr>
+<tr class="odd">
+<td><code>Cuantas.personas</code></td>
+<td>Numérica</td>
+<td>Cantidad de convivientes</td>
+</tr>
+<tr class="even">
+<td><code>Aire.libre</code></td>
+<td>Dummy (0/1)</td>
+<td>Acceso a espacio al aire libre en la vivienda</td>
+</tr>
+<tr class="odd">
+<td><code>Metros</code></td>
+<td>Numérica</td>
+<td>Metros cuadrados de la vivienda (limpiada — ver Sección de limpieza)</td>
+</tr>
+<tr class="even">
+<td><code>Mt.persona</code></td>
+<td>Numérica</td>
+<td>Metros cuadrados por persona conviviente</td>
+</tr>
+<tr class="odd">
+<td><code>Fisica.antes</code>, <code>Fisica.ahora</code></td>
+<td>Numérica</td>
+<td>Frecuencia de actividad física, antes y durante la cuarentena</td>
+</tr>
+<tr class="even">
+<td><strong>Contexto socioeconómico</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>INSE</code></td>
+<td>Numérica</td>
+<td>Índice de Nivel Socioeconómico (calculado)</td>
+</tr>
+<tr class="even">
+<td><code>INSE.Cat</code></td>
+<td>Categórica ordinal</td>
+<td>Categoría del INSE (nivel socioeconómico)</td>
+</tr>
+<tr class="odd">
+<td><code>Personas.hogar</code></td>
+<td>Numérica</td>
+<td>Cantidad de personas en el hogar</td>
+</tr>
+<tr class="even">
+<td><code>Ingresos</code></td>
+<td>Categórica ordinal</td>
+<td>¨Personas que reciben ingresos en el hogar.</td>
+</tr>
+<tr class="odd">
+<td><code>Ingresos.INSE</code></td>
+<td>Numérica</td>
+<td>Puntaje del INSE para la cantidad de personas con ingresos.</td>
+</tr>
+<tr class="even">
+<td><code>Estudios.sostenedor</code></td>
+<td>Categórica ordinal</td>
+<td>Nivel educativo del sostén del hogar</td>
+</tr>
+<tr class="odd">
+<td><code>Cobertura.sostenedor</code></td>
+<td>Categórica</td>
+<td>Cobertura de salud del sostén del hogar</td>
+</tr>
+<tr class="even">
+<td><code>Baños</code>, <code>Automovil</code>, <code>TV</code>, <code>Heladera</code>, <code>Domestico</code></td>
+<td>Numérica/Dummy</td>
+<td>Indicadores de bienes/servicios del hogar (insumos del INSE)</td>
+</tr>
+<tr class="odd">
+<td><strong>Condiciones de salud preexistentes</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>Asma</code>, <code>EPOC</code>, <code>Hipertension</code>, <code>Cardiacas</code>, <code>Diabetes</code>, <code>Inmunodepresion</code>, <code>Trastornos.mentales</code>, <code>Ninguna</code></td>
+<td>Dummy (0/1) c/u</td>
+<td>Condiciones de salud autorreportadas</td>
+</tr>
+<tr class="odd">
+<td><strong>Variables de resultado — salud mental</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>BDI</code></td>
+<td>Numérica (0-63)</td>
+<td>Puntaje total del Inventario de Depresión de Beck</td>
+</tr>
+<tr class="odd">
+<td><code>BDI.Cat</code></td>
+<td>Categórica ordinal</td>
+<td>Categoría de depresión (sin depresión o depresión en rango clínico)</td>
+</tr>
+<tr class="even">
+<td><code>STAI.E</code></td>
+<td>Numérica (0-60)</td>
+<td>Puntaje de ansiedad estado (STAI)</td>
+</tr>
+<tr class="odd">
+<td><code>STAI.E.Cat</code></td>
+<td>Categórica ordinal</td>
+<td>Categoría de ansiedad estado (normal o clínica)</td>
+</tr>
+<tr class="even">
+<td><code>STAI.R</code></td>
+<td>Numérica (0-60)</td>
+<td>Puntaje de ansiedad rasgo (STAI)</td>
+</tr>
+<tr class="odd">
+<td><code>STAI.R.Cat</code></td>
+<td>Categórica ordinal</td>
+<td>Categoría de ansiedad rasgo (normal o clínica)</td>
+</tr>
+<tr class="even">
+<td><code>SA.ANS</code>, <code>SA.DEP</code></td>
+<td>Numérica</td>
+<td>Puntajes de las subescalas de ansiedad y depresión del SA-90</td>
+</tr>
+<tr class="odd">
+<td><code>HS</code></td>
+<td>Numérica (0-20)</td>
+<td>Puntaje de desesperanza (Escala de desesperanza de Beck)</td>
+</tr>
+<tr class="even">
+<td><code>HS.Cat</code></td>
+<td>Categórica ordinal</td>
+<td>Categoría de la escala de desesperanza (ninguna, leve, moderada, alta)</td>
+</tr>
+<tr class="odd">
+<td><strong>Temporal</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>Semana</code></td>
+<td>Numérica</td>
+<td>Semana de la cuarentena en que se respondió la encuesta</td>
+</tr>
+</tbody>
+</table>
+<p>Los datos ya estaban procesados de entrada, por ejemplo, habian variables recodificadas que, como no presentan una perdida de información comparandolas a como estaban antes, las utilizamos en vez de las originales. La recodificación se realizó con fines de facilitar los análisis. En este chunk nos quedamos con las variables mas relevantes para el analisis y eliminamos respuestas repetidas. Por privacidad, excluimos las direcciones de correo electrónico de los participantes, solo los utilizamos para retirar las respuestas repetidas. También corregimos datos de tamaño de vivienda como por ejemplo una vivienda de 10000 m2 en Montevideo, que pusimos como NA y luego cambiamos NA de las variables salud y desempleo, que por la estructura de la encuesta las transformamos en “No aplica”.</p>
+<p>Corrimos este codigo solo una vez y luego, creamos un nuevo csv ya limpio para poder subir a Github sin problemas:</p>
+<p>El código que se utilizó para ello fue (se adjunta ahora pero no ejecutable):</p>
+<p>datos &lt;- read_xlsx(“datos trabajo final.xlsx”, sheet = “Base datos columnas primera tom”)</p>
+<p>mutate( Metros = case_when( Metros &gt; 5000 &amp; Departamento %in% c(“MONTEVIDEO”, “CANELONES”) ~ NA_real_, Metros &gt; 15000 ~ NA_real_, TRUE ~ Metros ),</p>
+<p>Mt.persona = ifelse( is.na(Metros), NA_real_, Mt.persona ),</p>
+<p>Salud = ifelse( is.na(Salud), “No aplica”, as.character(Salud) ),</p>
+<p>Desempleo.ahora = ifelse( is.na(Desempleo.ahora), “No aplica”, as.character(Desempleo.ahora) ),</p>
+<p>Fisica.antes = if_else( Fisica.antes &gt; 10, NA_real_, Fisica.antes ),</p>
+<p>Fisica.ahora = if_else( Fisica.ahora &gt; 10, NA_real_, Fisica.ahora ),</p>
+<p>Horas.aislamiento = if_else( Horas.aislamiento &gt; 24, NA_real_, Horas.aislamiento ) )</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>datos_limpio <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"datos_limpios.csv"</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">show_col_types =</span> <span class="cn">FALSE</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Sexo</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">Sexo =</span> <span class="fu">factor</span>(</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>      Sexo,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>      <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>),</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>      <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Mujer"</span>, <span class="st">"Varón"</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Zona de residencia</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">Zona =</span> <span class="fu">factor</span>(</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>      <span class="fu">if_else</span>(</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>        Departamento <span class="sc">==</span> <span class="st">"MONTEVIDEO"</span>,</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Montevideo"</span>,</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Interior"</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>      ),</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>      <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Montevideo"</span>, <span class="st">"Interior"</span>)</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="co"># BDI: 0 = sin depresión; 1, 2 o 3 = depresión</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">BDI_categoria =</span> <span class="fu">factor</span>(</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>      <span class="fu">if_else</span>(BDI.Cat <span class="sc">==</span> <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>),</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>      <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>),</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>      <span class="at">labels =</span> <span class="fu">c</span>(</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Sin depresión"</span>,</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Depresión"</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Ansiedad estado</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">STAI_E_categoria =</span> <span class="fu">factor</span>(</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>      STAI.E.Cat,</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>      <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>),</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>      <span class="at">labels =</span> <span class="fu">c</span>(</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Ansiedad-estado normal"</span>,</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Ansiedad-estado clínica"</span></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Ansiedad rasgo</span></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>    <span class="at">STAI_R_categoria =</span> <span class="fu">factor</span>(</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>      STAI.R.Cat,</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>      <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>),</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>      <span class="at">labels =</span> <span class="fu">c</span>(</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Ansiedad-rasgo normal"</span>,</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Ansiedad-rasgo clínica"</span></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Desesperanza</span></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>    <span class="at">HS_categoria =</span> <span class="fu">factor</span>(</span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>      HS.Cat,</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>      <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>),</span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>      <span class="at">labels =</span> <span class="fu">c</span>(</span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Ninguna"</span>,</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Leve"</span>,</span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Moderada"</span>,</span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Alta"</span></span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>      ),</span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>      <span class="at">ordered =</span> <span class="cn">TRUE</span></span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Nivel socioeconómico</span></span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>    <span class="at">INSE_categoria =</span> <span class="fu">factor</span>(</span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>      INSE.Cat,</span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>      <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>),</span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>      <span class="at">labels =</span> <span class="fu">c</span>(</span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>        <span class="st">"B-"</span>,</span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>        <span class="st">"B+"</span>,</span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>        <span class="st">"M-"</span>,</span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>        <span class="st">"M"</span>,</span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>        <span class="st">"M+"</span>,</span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a>        <span class="st">"A-"</span>,</span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a>        <span class="st">"A+"</span></span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a>      ),</span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>      <span class="at">ordered =</span> <span class="cn">TRUE</span></span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Tipo de aislamiento</span></span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a>    <span class="at">Aislamiento =</span> <span class="fu">factor</span>(</span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a>      Tipo.aislamiento.recod,</span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a>      <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>),</span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a>      <span class="at">labels =</span> <span class="fu">c</span>(</span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Retornó a una rutina normal"</span>,</span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Aislamiento parcial"</span>,</span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Comenzó a salir por trabajo"</span>,</span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a>        <span class="st">"No realiza aislamiento"</span>,</span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Aislamiento total"</span></span>
+<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Teletrabajo</span></span>
+<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a>    <span class="at">Teletrabajo_categoria =</span> <span class="fu">factor</span>(</span>
+<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a>      Teletrabajo,</span>
+<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a>      <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>),</span>
+<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a>      <span class="at">labels =</span> <span class="fu">c</span>(</span>
+<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a>        <span class="st">"No tiene trabajo"</span>,</span>
+<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a>        <span class="st">"No realiza teletrabajo"</span>,</span>
+<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Teletrabaja la mitad o menos de sus tareas"</span>,</span>
+<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Teletrabaja todas o casi todas sus tareas"</span></span>
+<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Por razones de confidencialidad, la base original con datos identificatorios no se incluye en el repositorio. El análisis reproducible comienza a partir de “datos_limpios.csv”, que contiene exclusivamente la información anonimizada necesaria para el trabajo.</p>
+</section>
+<section id="análisis-exploratorio" class="level1">
+<h1>Análisis Exploratorio</h1>
+<section id="para-comenzar-vamos-a-analizar-a-la-poblacion-de-nuestra-encuesta-para-ver-datos-de-sus-edades-sexo-inse-y-zona-geografica-con-sus-respectivas-visualizaciones." class="level4">
+<h4 class="anchored" data-anchor-id="para-comenzar-vamos-a-analizar-a-la-poblacion-de-nuestra-encuesta-para-ver-datos-de-sus-edades-sexo-inse-y-zona-geografica-con-sus-respectivas-visualizaciones.">Para comenzar, vamos a analizar a la poblacion de nuestra encuesta, para ver datos de sus edades, sexo, INSE y zona geografica con sus respectivas visualizaciones.</h4>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Resumen numérico de edad e INSE</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>datos_limpio <span class="sc">%&gt;%</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">edad_media =</span> <span class="fu">mean</span>(Edad, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">edad_mediana =</span> <span class="fu">median</span>(Edad, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">edad_sd =</span> <span class="fu">sd</span>(Edad, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">edad_minima =</span> <span class="fu">min</span>(Edad, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">edad_maxima =</span> <span class="fu">max</span>(Edad, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">inse_media =</span> <span class="fu">mean</span>(INSE, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">inse_mediana =</span> <span class="fu">median</span>(INSE, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">inse_sd =</span> <span class="fu">sd</span>(INSE, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">inse_minimo =</span> <span class="fu">min</span>(INSE, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">inse_maximo =</span> <span class="fu">max</span>(INSE, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 10
+  edad_media edad_mediana edad_sd edad_minima edad_maxima inse_media
+       &lt;dbl&gt;        &lt;dbl&gt;   &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;      &lt;dbl&gt;
+1       37.4           35    13.4          18          80       49.9
+# ℹ 4 more variables: inse_mediana &lt;dbl&gt;, inse_sd &lt;dbl&gt;, inse_minimo &lt;dbl&gt;,
+#   inse_maximo &lt;dbl&gt;</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Distribución según sexo</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>datos_limpio <span class="sc">%&gt;%</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(Sexo) <span class="sc">%&gt;%</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">porcentaje =</span> <span class="fu">round</span>(<span class="dv">100</span> <span class="sc">*</span> n <span class="sc">/</span> <span class="fu">sum</span>(n), <span class="dv">1</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 3
+  Sexo      n porcentaje
+  &lt;fct&gt; &lt;int&gt;      &lt;dbl&gt;
+1 Mujer   836       79.4
+2 Varón   217       20.6</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Distribución según categoría de nivel socioeconómico</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>datos_limpio <span class="sc">%&gt;%</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(INSE_categoria) <span class="sc">%&gt;%</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">porcentaje =</span> <span class="fu">round</span>(<span class="dv">100</span> <span class="sc">*</span> n <span class="sc">/</span> <span class="fu">sum</span>(n), <span class="dv">1</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 7 × 3
+  INSE_categoria     n porcentaje
+  &lt;ord&gt;          &lt;int&gt;      &lt;dbl&gt;
+1 B-                12        1.1
+2 B+                48        4.6
+3 M-                85        8.1
+4 M                163       15.5
+5 M+               282       26.8
+6 A-               320       30.4
+7 A+               143       13.6</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Distribución según zona geográfica</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>datos_limpio <span class="sc">%&gt;%</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(Zona) <span class="sc">%&gt;%</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">porcentaje =</span> <span class="fu">round</span>(<span class="dv">100</span> <span class="sc">*</span> n <span class="sc">/</span> <span class="fu">sum</span>(n), <span class="dv">1</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 3
+  Zona           n porcentaje
+  &lt;fct&gt;      &lt;int&gt;      &lt;dbl&gt;
+1 Montevideo   699       66.4
+2 Interior     354       33.6</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Distribución de la edad</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(datos_limpio, <span class="fu">aes</span>(<span class="at">x =</span> Edad)) <span class="sc">+</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">binwidth =</span> <span class="dv">5</span>,</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"steelblue"</span>,</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"white"</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Distribución de la edad"</span>,</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Edad en años"</span>,</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Cantidad de participantes"</span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="trabajoFinal_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Distribución según sexo</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(datos_limpio, <span class="fu">aes</span>(<span class="at">x =</span> Sexo)) <span class="sc">+</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">stat =</span> <span class="st">"count"</span>,</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">after_stat</span>(count)),</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.5</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Distribución de la muestra según sexo"</span>,</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Sexo"</span>,</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Cantidad de participantes"</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="trabajoFinal_files/figure-html/unnamed-chunk-4-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Distribución según nivel socioeconómico</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(datos_limpio, <span class="fu">aes</span>(<span class="at">x =</span> INSE_categoria)) <span class="sc">+</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">stat =</span> <span class="st">"count"</span>,</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">after_stat</span>(count)),</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.5</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Distribución según nivel socioeconómico"</span>,</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Categoría de INSE"</span>,</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Cantidad de participantes"</span></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="trabajoFinal_files/figure-html/unnamed-chunk-4-3.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Distribución según zona geográfica</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(datos_limpio, <span class="fu">aes</span>(<span class="at">x =</span> Zona, <span class="at">fill =</span> Zona)) <span class="sc">+</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">stat =</span> <span class="st">"count"</span>,</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">after_stat</span>(count)),</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.5</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Distribución según zona geográfica"</span>,</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Zona"</span>,</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Cantidad de participantes"</span></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="trabajoFinal_files/figure-html/unnamed-chunk-4-4.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>La edad media es de 37.4 años, la mediana son 35 años y el rango va desde 18 años hasta 80.</p>
+<p>En la muestra hay una alta proporcion de mujeres, siendo un 79% de mujeres.</p>
+<p>El INSE (<a href="http://www.ceismu.org/site/wp-content/uploads/INSE-Informe-2023.pdf">Índice de Nivel Socioeconómico</a>) se concentra en las categorias medias altas, concentrandose el 57% de la muestra entre las categorías M+ (media alta) y A- (alta), con muy poca gente en los extremos.</p>
+<p>La mayoria de gente (66.4%) es de Montevideo. El resto, pertenece al interior. Como en algunos departamentos habian muy pocas observaciones, decidimos agruparlos en Montevideo vs Interior para que quedaran dos grupos bien diferenciados con una buena cantidad de observaciones.</p>
+</section>
+<section id="distribución-de-los-indicadores-de-salud-mental" class="level4">
+<h4 class="anchored" data-anchor-id="distribución-de-los-indicadores-de-salud-mental">1. Distribución de los indicadores de salud mental</h4>
+<p>La primera pregunta busca describir la presencia e intensidad de los indicadores de depresión, ansiedad y desesperanza en la muestra. Para ello se presentan, en primer lugar, medidas de resumen de los puntajes de las cuatro escalas. Posteriormente, se examinan sus distribuciones y la proporción de participantes comprendida en cada categoría clínica.</p>
+<p>Resumen de los puntajes</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>puntajes_long <span class="ot">&lt;-</span> datos_limpio <span class="sc">%&gt;%</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(BDI, STAI.E, STAI.R, HS) <span class="sc">%&gt;%</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">cols =</span> <span class="fu">everything</span>(),</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">"Indicador"</span>,</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">"Puntaje"</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">Indicador =</span> <span class="fu">recode</span>(</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>      Indicador,</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">BDI =</span> <span class="st">"Depresión (BDI)"</span>,</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>      <span class="at">STAI.E =</span> <span class="st">"Ansiedad estado"</span>,</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>      <span class="at">STAI.R =</span> <span class="st">"Ansiedad rasgo"</span>,</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>      <span class="at">HS =</span> <span class="st">"Desesperanza"</span></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>resumen_puntajes <span class="ot">&lt;-</span> puntajes_long <span class="sc">%&gt;%</span></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Indicador) <span class="sc">%&gt;%</span></span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">n =</span> <span class="fu">sum</span>(<span class="sc">!</span><span class="fu">is.na</span>(Puntaje)),</span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">Media =</span> <span class="fu">mean</span>(Puntaje, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">Mediana =</span> <span class="fu">median</span>(Puntaje, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">DE =</span> <span class="fu">sd</span>(Puntaje, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>    Mínimo <span class="ot">=</span> <span class="fu">min</span>(Puntaje, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>    Máximo <span class="ot">=</span> <span class="fu">max</span>(Puntaje, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a>  resumen_puntajes,</span>
+<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a>  <span class="at">digits =</span> <span class="dv">2</span>,</span>
+<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">"Resumen de los indicadores de salud mental"</span></span>
+<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Resumen de los indicadores de salud mental</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Indicador</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">Media</th>
+<th style="text-align: right;">Mediana</th>
+<th style="text-align: right;">DE</th>
+<th style="text-align: right;">Mínimo</th>
+<th style="text-align: right;">Máximo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Ansiedad estado</td>
+<td style="text-align: right;">1053</td>
+<td style="text-align: right;">22.25</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">12.07</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">56</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ansiedad rasgo</td>
+<td style="text-align: right;">1053</td>
+<td style="text-align: right;">22.69</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">11.02</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">57</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Depresión (BDI)</td>
+<td style="text-align: right;">1053</td>
+<td style="text-align: right;">12.52</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">9.44</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">53</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Desesperanza</td>
+<td style="text-align: right;">1053</td>
+<td style="text-align: right;">3.63</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3.77</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">19</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Histogramas</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(puntajes_long, <span class="fu">aes</span>(<span class="at">x =</span> Puntaje)) <span class="sc">+</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">bins =</span> <span class="dv">20</span>,</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"steelblue"</span>,</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"white"</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>    <span class="sc">~</span>Indicador,</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">scales =</span> <span class="st">"free"</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Distribución de los puntajes de salud mental"</span>,</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Puntaje"</span>,</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Cantidad de participantes"</span></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="trabajoFinal_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Categorías clínicas etiquetadas</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>categorias_clinicas <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  datos_limpio <span class="sc">%&gt;%</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count</span>(BDI_categoria) <span class="sc">%&gt;%</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">transmute</span>(</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>      <span class="at">Indicador =</span> <span class="st">"Depresión"</span>,</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>      Categoría <span class="ot">=</span> <span class="fu">as.character</span>(BDI_categoria),</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>      n</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>  datos_limpio <span class="sc">%&gt;%</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count</span>(STAI_E_categoria) <span class="sc">%&gt;%</span></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">transmute</span>(</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>      <span class="at">Indicador =</span> <span class="st">"Ansiedad estado"</span>,</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>      Categoría <span class="ot">=</span> <span class="fu">as.character</span>(STAI_E_categoria),</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>      n</span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>  datos_limpio <span class="sc">%&gt;%</span></span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count</span>(STAI_R_categoria) <span class="sc">%&gt;%</span></span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">transmute</span>(</span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a>      <span class="at">Indicador =</span> <span class="st">"Ansiedad rasgo"</span>,</span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>      Categoría <span class="ot">=</span> <span class="fu">as.character</span>(STAI_R_categoria),</span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a>      n</span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a>  datos_limpio <span class="sc">%&gt;%</span></span>
+<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count</span>(HS_categoria) <span class="sc">%&gt;%</span></span>
+<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">transmute</span>(</span>
+<span id="cb17-29"><a href="#cb17-29" aria-hidden="true" tabindex="-1"></a>      <span class="at">Indicador =</span> <span class="st">"Desesperanza"</span>,</span>
+<span id="cb17-30"><a href="#cb17-30" aria-hidden="true" tabindex="-1"></a>      Categoría <span class="ot">=</span> <span class="fu">as.character</span>(HS_categoria),</span>
+<span id="cb17-31"><a href="#cb17-31" aria-hidden="true" tabindex="-1"></a>      n</span>
+<span id="cb17-32"><a href="#cb17-32" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb17-33"><a href="#cb17-33" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span></span>
+<span id="cb17-34"><a href="#cb17-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Indicador) <span class="sc">%&gt;%</span></span>
+<span id="cb17-35"><a href="#cb17-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb17-36"><a href="#cb17-36" aria-hidden="true" tabindex="-1"></a>    <span class="at">Porcentaje =</span> <span class="fu">round</span>(<span class="dv">100</span> <span class="sc">*</span> n <span class="sc">/</span> <span class="fu">sum</span>(n), <span class="dv">1</span>)</span>
+<span id="cb17-37"><a href="#cb17-37" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb17-38"><a href="#cb17-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span>
+<span id="cb17-39"><a href="#cb17-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-40"><a href="#cb17-40" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
+<span id="cb17-41"><a href="#cb17-41" aria-hidden="true" tabindex="-1"></a>  categorias_clinicas,</span>
+<span id="cb17-42"><a href="#cb17-42" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">"Distribución de las categorías clínicas"</span>,</span>
+<span id="cb17-43"><a href="#cb17-43" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Indicador"</span>, <span class="st">"Categoría"</span>, <span class="st">"Frecuencia"</span>, <span class="st">"Porcentaje"</span>)</span>
+<span id="cb17-44"><a href="#cb17-44" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Distribución de las categorías clínicas</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Indicador</th>
+<th style="text-align: left;">Categoría</th>
+<th style="text-align: right;">Frecuencia</th>
+<th style="text-align: right;">Porcentaje</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Depresión</td>
+<td style="text-align: left;">Sin depresión</td>
+<td style="text-align: right;">657</td>
+<td style="text-align: right;">62.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Depresión</td>
+<td style="text-align: left;">Depresión</td>
+<td style="text-align: right;">396</td>
+<td style="text-align: right;">37.6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Ansiedad estado</td>
+<td style="text-align: left;">Ansiedad-estado normal</td>
+<td style="text-align: right;">897</td>
+<td style="text-align: right;">85.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ansiedad estado</td>
+<td style="text-align: left;">Ansiedad-estado clínica</td>
+<td style="text-align: right;">156</td>
+<td style="text-align: right;">14.8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Ansiedad rasgo</td>
+<td style="text-align: left;">Ansiedad-rasgo normal</td>
+<td style="text-align: right;">881</td>
+<td style="text-align: right;">83.7</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ansiedad rasgo</td>
+<td style="text-align: left;">Ansiedad-rasgo clínica</td>
+<td style="text-align: right;">172</td>
+<td style="text-align: right;">16.3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Desesperanza</td>
+<td style="text-align: left;">Ninguna</td>
+<td style="text-align: right;">671</td>
+<td style="text-align: right;">63.7</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Desesperanza</td>
+<td style="text-align: left;">Leve</td>
+<td style="text-align: right;">262</td>
+<td style="text-align: right;">24.9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Desesperanza</td>
+<td style="text-align: left;">Moderada</td>
+<td style="text-align: right;">93</td>
+<td style="text-align: right;">8.8</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Desesperanza</td>
+<td style="text-align: left;">Alta</td>
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">2.6</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Gráfico de categorías</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>categorias_clinicas <span class="sc">%&gt;%</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    Categoría <span class="ot">=</span> <span class="fu">factor</span>(</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>      Categoría,</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>      <span class="at">levels =</span> <span class="fu">c</span>(</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Sin depresión"</span>,</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Depresión"</span>,</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Ansiedad-estado normal"</span>,</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Ansiedad-estado clínica"</span>,</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Ansiedad-rasgo normal"</span>,</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Ansiedad-rasgo clínica"</span>,</span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Ninguna"</span>,</span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Leve"</span>,</span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Moderada"</span>,</span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Alta"</span></span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(</span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(</span>
+<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a>      <span class="at">x =</span> Categoría,</span>
+<span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a>      <span class="at">y =</span> Porcentaje,</span>
+<span id="cb18-23"><a href="#cb18-23" aria-hidden="true" tabindex="-1"></a>      <span class="at">fill =</span> Categoría</span>
+<span id="cb18-24"><a href="#cb18-24" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb18-25"><a href="#cb18-25" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb18-26"><a href="#cb18-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb18-27"><a href="#cb18-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(</span>
+<span id="cb18-28"><a href="#cb18-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">paste0</span>(Porcentaje, <span class="st">"%"</span>)),</span>
+<span id="cb18-29"><a href="#cb18-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.3</span></span>
+<span id="cb18-30"><a href="#cb18-30" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb18-31"><a href="#cb18-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(</span>
+<span id="cb18-32"><a href="#cb18-32" aria-hidden="true" tabindex="-1"></a>    <span class="sc">~</span>Indicador,</span>
+<span id="cb18-33"><a href="#cb18-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">scales =</span> <span class="st">"free_x"</span></span>
+<span id="cb18-34"><a href="#cb18-34" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb18-35"><a href="#cb18-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb18-36"><a href="#cb18-36" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Distribución de las categorías clínicas"</span>,</span>
+<span id="cb18-37"><a href="#cb18-37" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="cn">NULL</span>,</span>
+<span id="cb18-38"><a href="#cb18-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Porcentaje"</span></span>
+<span id="cb18-39"><a href="#cb18-39" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb18-40"><a href="#cb18-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb18-41"><a href="#cb18-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb18-42"><a href="#cb18-42" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(</span>
+<span id="cb18-43"><a href="#cb18-43" aria-hidden="true" tabindex="-1"></a>      <span class="at">angle =</span> <span class="dv">30</span>,</span>
+<span id="cb18-44"><a href="#cb18-44" aria-hidden="true" tabindex="-1"></a>      <span class="at">hjust =</span> <span class="dv">1</span></span>
+<span id="cb18-45"><a href="#cb18-45" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb18-46"><a href="#cb18-46" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="trabajoFinal_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Los puntajes de los cuatro indicadores presentaron distribuciones asimétricas hacia los valores elevados, como se observa en los histogramas y en las medias superiores a las medianas. El puntaje medio de depresión fue 12,52 (DE = 9,44), mientras que las medias de ansiedad estado y ansiedad rasgo fueron 22,25 (DE = 12,07) y 22,69 (DE = 11,02), respectivamente. La desesperanza presentó una media de 3,63 (DE = 3,77) y una mediana de 2. En cuanto a las categorías clínicas, el 37,6 % de la muestra fue clasificado con depresión, el 14,8 % con ansiedad estado clínica y el 16,3 % con ansiedad rasgo clínica. Respecto de la desesperanza, el 63,7 % no presentó desesperanza, el 24,9 % se ubicó en el nivel leve, el 8,8 % en el moderado y el 2,6 % en el alto. Estos resultados muestran que, aunque la mayoría no se encontraba en las categorías clínicas más elevadas, una proporción relevante presentó sintomatología depresiva, ansiosa o desesperanza.</p>
+</section>
+<section id="diferencias-según-sexo-y-zona-de-residencia" class="level4">
+<h4 class="anchored" data-anchor-id="diferencias-según-sexo-y-zona-de-residencia">2. Diferencias según sexo y zona de residencia</h4>
+<p>La segunda pregunta examina si los puntajes de depresión, ansiedad y desesperanza presentan diferencias según sexo y zona de residencia. Dado que el objetivo es comparar la intensidad de los indicadores, se utilizan los puntajes continuos de las escalas. Se presentan medidas de resumen y diagramas de caja para comparar la distribución de los puntajes entre los grupos.</p>
+<p>Preparación de los datos.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>comparaciones_grupos <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  datos_limpio <span class="sc">%&gt;%</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(Sexo, BDI, STAI.E, STAI.R, HS) <span class="sc">%&gt;%</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">pivot_longer</span>(</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>      <span class="at">cols =</span> <span class="fu">c</span>(BDI, STAI.E, STAI.R, HS),</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>      <span class="at">names_to =</span> <span class="st">"Indicador"</span>,</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>      <span class="at">values_to =</span> <span class="st">"Puntaje"</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">transmute</span>(</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>      Comparación <span class="ot">=</span> <span class="st">"Sexo"</span>,</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">Grupo =</span> <span class="fu">as.character</span>(Sexo),</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>      Indicador,</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>      Puntaje</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>  datos_limpio <span class="sc">%&gt;%</span></span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(Zona, BDI, STAI.E, STAI.R, HS) <span class="sc">%&gt;%</span></span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">pivot_longer</span>(</span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>      <span class="at">cols =</span> <span class="fu">c</span>(BDI, STAI.E, STAI.R, HS),</span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a>      <span class="at">names_to =</span> <span class="st">"Indicador"</span>,</span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a>      <span class="at">values_to =</span> <span class="st">"Puntaje"</span></span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span></span>
+<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">transmute</span>(</span>
+<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a>      Comparación <span class="ot">=</span> <span class="st">"Zona de residencia"</span>,</span>
+<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a>      <span class="at">Grupo =</span> <span class="fu">as.character</span>(Zona),</span>
+<span id="cb19-26"><a href="#cb19-26" aria-hidden="true" tabindex="-1"></a>      Indicador,</span>
+<span id="cb19-27"><a href="#cb19-27" aria-hidden="true" tabindex="-1"></a>      Puntaje</span>
+<span id="cb19-28"><a href="#cb19-28" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb19-29"><a href="#cb19-29" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span></span>
+<span id="cb19-30"><a href="#cb19-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb19-31"><a href="#cb19-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">Indicador =</span> <span class="fu">recode</span>(</span>
+<span id="cb19-32"><a href="#cb19-32" aria-hidden="true" tabindex="-1"></a>      Indicador,</span>
+<span id="cb19-33"><a href="#cb19-33" aria-hidden="true" tabindex="-1"></a>      <span class="at">BDI =</span> <span class="st">"Depresión"</span>,</span>
+<span id="cb19-34"><a href="#cb19-34" aria-hidden="true" tabindex="-1"></a>      <span class="at">STAI.E =</span> <span class="st">"Ansiedad estado"</span>,</span>
+<span id="cb19-35"><a href="#cb19-35" aria-hidden="true" tabindex="-1"></a>      <span class="at">STAI.R =</span> <span class="st">"Ansiedad rasgo"</span>,</span>
+<span id="cb19-36"><a href="#cb19-36" aria-hidden="true" tabindex="-1"></a>      <span class="at">HS =</span> <span class="st">"Desesperanza"</span></span>
+<span id="cb19-37"><a href="#cb19-37" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb19-38"><a href="#cb19-38" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Tabla comparativa</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>resumen_grupos <span class="ot">&lt;-</span> comparaciones_grupos <span class="sc">%&gt;%</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Comparación, Grupo, Indicador) <span class="sc">%&gt;%</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">n =</span> <span class="fu">sum</span>(<span class="sc">!</span><span class="fu">is.na</span>(Puntaje)),</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">Media =</span> <span class="fu">mean</span>(Puntaje, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">Mediana =</span> <span class="fu">median</span>(Puntaje, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">DE =</span> <span class="fu">sd</span>(Puntaje, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>  resumen_grupos,</span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">digits =</span> <span class="dv">2</span>,</span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">"Indicadores de salud mental según sexo y zona"</span></span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Indicadores de salud mental según sexo y zona</caption>
+<colgroup>
+<col style="width: 27%">
+<col style="width: 15%">
+<col style="width: 22%">
+<col style="width: 5%">
+<col style="width: 8%">
+<col style="width: 11%">
+<col style="width: 8%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Comparación</th>
+<th style="text-align: left;">Grupo</th>
+<th style="text-align: left;">Indicador</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">Media</th>
+<th style="text-align: right;">Mediana</th>
+<th style="text-align: right;">DE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Sexo</td>
+<td style="text-align: left;">Mujer</td>
+<td style="text-align: left;">Ansiedad estado</td>
+<td style="text-align: right;">836</td>
+<td style="text-align: right;">22.69</td>
+<td style="text-align: right;">21.0</td>
+<td style="text-align: right;">11.96</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sexo</td>
+<td style="text-align: left;">Mujer</td>
+<td style="text-align: left;">Ansiedad rasgo</td>
+<td style="text-align: right;">836</td>
+<td style="text-align: right;">23.17</td>
+<td style="text-align: right;">22.0</td>
+<td style="text-align: right;">10.83</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sexo</td>
+<td style="text-align: left;">Mujer</td>
+<td style="text-align: left;">Depresión</td>
+<td style="text-align: right;">836</td>
+<td style="text-align: right;">12.96</td>
+<td style="text-align: right;">11.0</td>
+<td style="text-align: right;">9.42</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sexo</td>
+<td style="text-align: left;">Mujer</td>
+<td style="text-align: left;">Desesperanza</td>
+<td style="text-align: right;">836</td>
+<td style="text-align: right;">3.56</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: right;">3.74</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sexo</td>
+<td style="text-align: left;">Varón</td>
+<td style="text-align: left;">Ansiedad estado</td>
+<td style="text-align: right;">217</td>
+<td style="text-align: right;">20.57</td>
+<td style="text-align: right;">18.0</td>
+<td style="text-align: right;">12.39</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sexo</td>
+<td style="text-align: left;">Varón</td>
+<td style="text-align: left;">Ansiedad rasgo</td>
+<td style="text-align: right;">217</td>
+<td style="text-align: right;">20.84</td>
+<td style="text-align: right;">19.0</td>
+<td style="text-align: right;">11.55</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sexo</td>
+<td style="text-align: left;">Varón</td>
+<td style="text-align: left;">Depresión</td>
+<td style="text-align: right;">217</td>
+<td style="text-align: right;">10.81</td>
+<td style="text-align: right;">9.0</td>
+<td style="text-align: right;">9.31</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sexo</td>
+<td style="text-align: left;">Varón</td>
+<td style="text-align: left;">Desesperanza</td>
+<td style="text-align: right;">217</td>
+<td style="text-align: right;">3.87</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">3.91</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Zona de residencia</td>
+<td style="text-align: left;">Interior</td>
+<td style="text-align: left;">Ansiedad estado</td>
+<td style="text-align: right;">354</td>
+<td style="text-align: right;">23.04</td>
+<td style="text-align: right;">21.5</td>
+<td style="text-align: right;">12.43</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Zona de residencia</td>
+<td style="text-align: left;">Interior</td>
+<td style="text-align: left;">Ansiedad rasgo</td>
+<td style="text-align: right;">354</td>
+<td style="text-align: right;">23.60</td>
+<td style="text-align: right;">22.0</td>
+<td style="text-align: right;">11.67</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Zona de residencia</td>
+<td style="text-align: left;">Interior</td>
+<td style="text-align: left;">Depresión</td>
+<td style="text-align: right;">354</td>
+<td style="text-align: right;">12.98</td>
+<td style="text-align: right;">11.0</td>
+<td style="text-align: right;">9.98</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Zona de residencia</td>
+<td style="text-align: left;">Interior</td>
+<td style="text-align: left;">Desesperanza</td>
+<td style="text-align: right;">354</td>
+<td style="text-align: right;">3.94</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: right;">4.04</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Zona de residencia</td>
+<td style="text-align: left;">Montevideo</td>
+<td style="text-align: left;">Ansiedad estado</td>
+<td style="text-align: right;">699</td>
+<td style="text-align: right;">21.85</td>
+<td style="text-align: right;">20.0</td>
+<td style="text-align: right;">11.87</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Zona de residencia</td>
+<td style="text-align: left;">Montevideo</td>
+<td style="text-align: left;">Ansiedad rasgo</td>
+<td style="text-align: right;">699</td>
+<td style="text-align: right;">22.23</td>
+<td style="text-align: right;">21.0</td>
+<td style="text-align: right;">10.65</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Zona de residencia</td>
+<td style="text-align: left;">Montevideo</td>
+<td style="text-align: left;">Depresión</td>
+<td style="text-align: right;">699</td>
+<td style="text-align: right;">12.28</td>
+<td style="text-align: right;">10.0</td>
+<td style="text-align: right;">9.15</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Zona de residencia</td>
+<td style="text-align: left;">Montevideo</td>
+<td style="text-align: left;">Desesperanza</td>
+<td style="text-align: right;">699</td>
+<td style="text-align: right;">3.47</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: right;">3.62</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Diagramas de caja</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  comparaciones_grupos,</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> Grupo, <span class="at">y =</span> Puntaje, <span class="at">fill =</span> Grupo)</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">show.legend =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">outlier.alpha =</span> <span class="fl">0.25</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(</span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>    Indicador <span class="sc">~</span> Comparación,</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">scales =</span> <span class="st">"free_y"</span></span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Indicadores de salud mental según sexo y zona"</span>,</span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="cn">NULL</span>,</span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Puntaje"</span></span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="trabajoFinal_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Las comparaciones descriptivas muestran que las mujeres presentaron mayores puntajes medios de depresión (12,96 frente a 10,81), ansiedad estado (22,69 frente a 20,57) y ansiedad rasgo (23,17 frente a 20,84) que los varones. En desesperanza se observó el patrón contrario, aunque la diferencia fue pequeña: la media fue 3,56 en las mujeres y 3,87 en los varones. En relación con la zona de residencia, las personas del interior presentaron medias algo mayores que las residentes en Montevideo en los cuatro indicadores: depresión (12,98 frente a 12,28), ansiedad estado (23,04 frente a 21,85), ansiedad rasgo (23,60 frente a 22,23) y desesperanza (3,94 frente a 3,47). Estas diferencias son descriptivas y, en general, de magnitud reducida; por lo tanto, no permiten afirmar por sí solas que existan diferencias estadísticamente significativas en la población. Además, deben interpretarse considerando la sobrerrepresentación de mujeres y residentes de Montevideo en la muestra.</p>
+</section>
+<section id="nivel-socioeconómico-y-salud-mental" class="level4">
+<h4 class="anchored" data-anchor-id="nivel-socioeconómico-y-salud-mental">3. Nivel socioeconómico y salud mental</h4>
+<p>La tercera pregunta analiza la relación entre el nivel socioeconómico y los indicadores de salud mental. Para conservar la información disponible, se utiliza el puntaje continuo del INSE y se calculan correlaciones de Spearman con los puntajes de depresión, ansiedad y desesperanza. Este coeficiente permite evaluar relaciones monotónicas sin asumir una distribución normal de las variables.</p>
+<p>Correlaciones</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>relaciones_inse <span class="ot">&lt;-</span> datos_limpio <span class="sc">%&gt;%</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(INSE, BDI, STAI.E, STAI.R, HS) <span class="sc">%&gt;%</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">cols =</span> <span class="fu">c</span>(BDI, STAI.E, STAI.R, HS),</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">"Indicador"</span>,</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">"Puntaje"</span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">Indicador =</span> <span class="fu">recode</span>(</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>      Indicador,</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">BDI =</span> <span class="st">"Depresión"</span>,</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>      <span class="at">STAI.E =</span> <span class="st">"Ansiedad estado"</span>,</span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>      <span class="at">STAI.R =</span> <span class="st">"Ansiedad rasgo"</span>,</span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>      <span class="at">HS =</span> <span class="st">"Desesperanza"</span></span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a>correlaciones_inse <span class="ot">&lt;-</span> relaciones_inse <span class="sc">%&gt;%</span></span>
+<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Indicador) <span class="sc">%&gt;%</span></span>
+<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">n =</span> <span class="fu">sum</span>(<span class="fu">complete.cases</span>(INSE, Puntaje)),</span>
+<span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">Rho =</span> <span class="fu">cor</span>(</span>
+<span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a>      INSE,</span>
+<span id="cb22-24"><a href="#cb22-24" aria-hidden="true" tabindex="-1"></a>      Puntaje,</span>
+<span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a>      <span class="at">method =</span> <span class="st">"spearman"</span>,</span>
+<span id="cb22-26"><a href="#cb22-26" aria-hidden="true" tabindex="-1"></a>      <span class="at">use =</span> <span class="st">"complete.obs"</span></span>
+<span id="cb22-27"><a href="#cb22-27" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb22-28"><a href="#cb22-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">p =</span> <span class="fu">cor.test</span>(</span>
+<span id="cb22-29"><a href="#cb22-29" aria-hidden="true" tabindex="-1"></a>      INSE,</span>
+<span id="cb22-30"><a href="#cb22-30" aria-hidden="true" tabindex="-1"></a>      Puntaje,</span>
+<span id="cb22-31"><a href="#cb22-31" aria-hidden="true" tabindex="-1"></a>      <span class="at">method =</span> <span class="st">"spearman"</span>,</span>
+<span id="cb22-32"><a href="#cb22-32" aria-hidden="true" tabindex="-1"></a>      <span class="at">exact =</span> <span class="cn">FALSE</span></span>
+<span id="cb22-33"><a href="#cb22-33" aria-hidden="true" tabindex="-1"></a>    )<span class="sc">$</span>p.value,</span>
+<span id="cb22-34"><a href="#cb22-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
+<span id="cb22-35"><a href="#cb22-35" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb22-36"><a href="#cb22-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-37"><a href="#cb22-37" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
+<span id="cb22-38"><a href="#cb22-38" aria-hidden="true" tabindex="-1"></a>  correlaciones_inse,</span>
+<span id="cb22-39"><a href="#cb22-39" aria-hidden="true" tabindex="-1"></a>  <span class="at">digits =</span> <span class="dv">3</span>,</span>
+<span id="cb22-40"><a href="#cb22-40" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">"Correlaciones entre INSE y salud mental"</span></span>
+<span id="cb22-41"><a href="#cb22-41" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Correlaciones entre INSE y salud mental</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Indicador</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">Rho</th>
+<th style="text-align: right;">p</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Ansiedad estado</td>
+<td style="text-align: right;">1053</td>
+<td style="text-align: right;">-0.152</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ansiedad rasgo</td>
+<td style="text-align: right;">1053</td>
+<td style="text-align: right;">-0.164</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Depresión</td>
+<td style="text-align: right;">1053</td>
+<td style="text-align: right;">-0.160</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Desesperanza</td>
+<td style="text-align: right;">1053</td>
+<td style="text-align: right;">-0.164</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Gráficos</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  relaciones_inse,</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> INSE, <span class="at">y =</span> Puntaje)</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">alpha =</span> <span class="fl">0.2</span>,</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"steelblue"</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">method =</span> <span class="st">"loess"</span>,</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">se =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"firebrick"</span></span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(</span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>    <span class="sc">~</span>Indicador,</span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">scales =</span> <span class="st">"free_y"</span></span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Relación entre nivel socioeconómico y salud mental"</span>,</span>
+<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Índice de nivel socioeconómico"</span>,</span>
+<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Puntaje"</span></span>
+<span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb23-23"><a href="#cb23-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="trabajoFinal_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>El nivel socioeconómico presentó correlaciones negativas y estadísticamente significativas con los cuatro indicadores de salud mental: depresión (rho = -0,160), ansiedad estado (rho = -0,152), ansiedad rasgo (rho = -0,164) y desesperanza (rho = -0,164); en todos los casos, p &lt; 0,001. Esto indica que un mayor nivel socioeconómico tendió a asociarse con menores puntajes de depresión, ansiedad y desesperanza. No obstante, todas las correlaciones fueron débiles, por lo que el nivel socioeconómico explica solamente una parte reducida de las diferencias observadas. Debido al carácter transversal y observacional de los datos, no puede establecerse una relación causal.</p>
+</section>
+<section id="actividad-física-aislamiento-y-salud-mental" class="level4">
+<h4 class="anchored" data-anchor-id="actividad-física-aislamiento-y-salud-mental">4. Actividad física, aislamiento y salud mental</h4>
+<p>La cuarta pregunta explora si los cambios en la actividad física y las distintas modalidades de aislamiento se relacionan con los indicadores de salud mental. Para analizar la actividad física se compara el valor informado antes y durante la cuarentena, clasificando a los participantes según si su actividad disminuyó, se mantuvo o aumentó. Posteriormente se comparan los puntajes de salud mental entre las diferentes modalidades de aislamiento.</p>
+<p>Cambio de actividad física</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>datos_limpio <span class="ot">&lt;-</span> datos_limpio <span class="sc">%&gt;%</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">Cambio_actividad =</span> Fisica.ahora <span class="sc">-</span> Fisica.antes,</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">Cambio_actividad_categoria =</span> <span class="fu">case_when</span>(</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>      <span class="fu">is.na</span>(Cambio_actividad) <span class="sc">~</span> <span class="cn">NA_character_</span>,</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>      Cambio_actividad <span class="sc">&lt;</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"Disminuyó"</span>,</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>      Cambio_actividad <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"Se mantuvo"</span>,</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>      Cambio_actividad <span class="sc">&gt;</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"Aumentó"</span></span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">Cambio_actividad_categoria =</span> <span class="fu">factor</span>(</span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>      Cambio_actividad_categoria,</span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>      <span class="at">levels =</span> <span class="fu">c</span>(</span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Disminuyó"</span>,</span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Se mantuvo"</span>,</span>
+<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Aumentó"</span></span>
+<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb25-19"><a href="#cb25-19" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb25-20"><a href="#cb25-20" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Tabla según cambio de actividad</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>resumen_actividad <span class="ot">&lt;-</span> datos_limpio <span class="sc">%&gt;%</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>    Cambio_actividad_categoria,</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>    BDI,</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>    STAI.E,</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>    STAI.R,</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>    HS</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(Cambio_actividad_categoria)) <span class="sc">%&gt;%</span></span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">cols =</span> <span class="fu">c</span>(BDI, STAI.E, STAI.R, HS),</span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">"Indicador"</span>,</span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">"Puntaje"</span></span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">Indicador =</span> <span class="fu">recode</span>(</span>
+<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a>      Indicador,</span>
+<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a>      <span class="at">BDI =</span> <span class="st">"Depresión"</span>,</span>
+<span id="cb26-19"><a href="#cb26-19" aria-hidden="true" tabindex="-1"></a>      <span class="at">STAI.E =</span> <span class="st">"Ansiedad estado"</span>,</span>
+<span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a>      <span class="at">STAI.R =</span> <span class="st">"Ansiedad rasgo"</span>,</span>
+<span id="cb26-21"><a href="#cb26-21" aria-hidden="true" tabindex="-1"></a>      <span class="at">HS =</span> <span class="st">"Desesperanza"</span></span>
+<span id="cb26-22"><a href="#cb26-22" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb26-23"><a href="#cb26-23" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb26-24"><a href="#cb26-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(</span>
+<span id="cb26-25"><a href="#cb26-25" aria-hidden="true" tabindex="-1"></a>    Cambio_actividad_categoria,</span>
+<span id="cb26-26"><a href="#cb26-26" aria-hidden="true" tabindex="-1"></a>    Indicador</span>
+<span id="cb26-27"><a href="#cb26-27" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb26-28"><a href="#cb26-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb26-29"><a href="#cb26-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">n =</span> <span class="fu">sum</span>(<span class="sc">!</span><span class="fu">is.na</span>(Puntaje)),</span>
+<span id="cb26-30"><a href="#cb26-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">Media =</span> <span class="fu">mean</span>(Puntaje, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb26-31"><a href="#cb26-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">Mediana =</span> <span class="fu">median</span>(Puntaje, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb26-32"><a href="#cb26-32" aria-hidden="true" tabindex="-1"></a>    <span class="at">DE =</span> <span class="fu">sd</span>(Puntaje, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb26-33"><a href="#cb26-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">Rango_observado =</span> <span class="fu">paste0</span>(</span>
+<span id="cb26-34"><a href="#cb26-34" aria-hidden="true" tabindex="-1"></a>      <span class="fu">min</span>(Puntaje, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb26-35"><a href="#cb26-35" aria-hidden="true" tabindex="-1"></a>      <span class="st">"–"</span>,</span>
+<span id="cb26-36"><a href="#cb26-36" aria-hidden="true" tabindex="-1"></a>      <span class="fu">max</span>(Puntaje, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb26-37"><a href="#cb26-37" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb26-38"><a href="#cb26-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
+<span id="cb26-39"><a href="#cb26-39" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb26-40"><a href="#cb26-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-41"><a href="#cb26-41" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
+<span id="cb26-42"><a href="#cb26-42" aria-hidden="true" tabindex="-1"></a>  resumen_actividad,</span>
+<span id="cb26-43"><a href="#cb26-43" aria-hidden="true" tabindex="-1"></a>  <span class="at">digits =</span> <span class="dv">2</span>,</span>
+<span id="cb26-44"><a href="#cb26-44" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">"Salud mental según cambio en la actividad física"</span>,</span>
+<span id="cb26-45"><a href="#cb26-45" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">c</span>(</span>
+<span id="cb26-46"><a href="#cb26-46" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Cambio en actividad"</span>,</span>
+<span id="cb26-47"><a href="#cb26-47" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Indicador"</span>,</span>
+<span id="cb26-48"><a href="#cb26-48" aria-hidden="true" tabindex="-1"></a>    <span class="st">"n"</span>,</span>
+<span id="cb26-49"><a href="#cb26-49" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Media"</span>,</span>
+<span id="cb26-50"><a href="#cb26-50" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Mediana"</span>,</span>
+<span id="cb26-51"><a href="#cb26-51" aria-hidden="true" tabindex="-1"></a>    <span class="st">"DE"</span>,</span>
+<span id="cb26-52"><a href="#cb26-52" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Rango observado"</span></span>
+<span id="cb26-53"><a href="#cb26-53" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb26-54"><a href="#cb26-54" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Salud mental según cambio en la actividad física</caption>
+<colgroup>
+<col style="width: 26%">
+<col style="width: 21%">
+<col style="width: 5%">
+<col style="width: 7%">
+<col style="width: 10%">
+<col style="width: 7%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Cambio en actividad</th>
+<th style="text-align: left;">Indicador</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">Media</th>
+<th style="text-align: right;">Mediana</th>
+<th style="text-align: right;">DE</th>
+<th style="text-align: left;">Rango observado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Disminuyó</td>
+<td style="text-align: left;">Ansiedad estado</td>
+<td style="text-align: right;">449</td>
+<td style="text-align: right;">23.43</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">12.22</td>
+<td style="text-align: left;">0–55</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Disminuyó</td>
+<td style="text-align: left;">Ansiedad rasgo</td>
+<td style="text-align: right;">449</td>
+<td style="text-align: right;">23.34</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">11.25</td>
+<td style="text-align: left;">3–57</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Disminuyó</td>
+<td style="text-align: left;">Depresión</td>
+<td style="text-align: right;">449</td>
+<td style="text-align: right;">13.49</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">9.66</td>
+<td style="text-align: left;">0–51</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Disminuyó</td>
+<td style="text-align: left;">Desesperanza</td>
+<td style="text-align: right;">449</td>
+<td style="text-align: right;">3.45</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3.71</td>
+<td style="text-align: left;">0–19</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Se mantuvo</td>
+<td style="text-align: left;">Ansiedad estado</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">21.60</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">12.06</td>
+<td style="text-align: left;">0–56</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Se mantuvo</td>
+<td style="text-align: left;">Ansiedad rasgo</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">22.41</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">11.00</td>
+<td style="text-align: left;">0–52</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Se mantuvo</td>
+<td style="text-align: left;">Depresión</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">11.76</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">9.41</td>
+<td style="text-align: left;">0–53</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Se mantuvo</td>
+<td style="text-align: left;">Desesperanza</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">3.82</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4.06</td>
+<td style="text-align: left;">0–19</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Aumentó</td>
+<td style="text-align: left;">Ansiedad estado</td>
+<td style="text-align: right;">147</td>
+<td style="text-align: right;">21.19</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">11.52</td>
+<td style="text-align: left;">0–51</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Aumentó</td>
+<td style="text-align: left;">Ansiedad rasgo</td>
+<td style="text-align: right;">147</td>
+<td style="text-align: right;">22.12</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">10.33</td>
+<td style="text-align: left;">0–50</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Aumentó</td>
+<td style="text-align: left;">Depresión</td>
+<td style="text-align: right;">147</td>
+<td style="text-align: right;">11.90</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">8.72</td>
+<td style="text-align: left;">0–40</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Aumentó</td>
+<td style="text-align: left;">Desesperanza</td>
+<td style="text-align: right;">147</td>
+<td style="text-align: right;">3.51</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2.91</td>
+<td style="text-align: left;">0–13</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Gráfico de actividad física</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>datos_limpio <span class="sc">%&gt;%</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>    Cambio_actividad_categoria,</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>    BDI,</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>    STAI.E,</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>    STAI.R,</span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>    HS</span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(Cambio_actividad_categoria)) <span class="sc">%&gt;%</span></span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">cols =</span> <span class="fu">c</span>(BDI, STAI.E, STAI.R, HS),</span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">"Indicador"</span>,</span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">"Puntaje"</span></span>
+<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb27-16"><a href="#cb27-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">Indicador =</span> <span class="fu">recode</span>(</span>
+<span id="cb27-17"><a href="#cb27-17" aria-hidden="true" tabindex="-1"></a>      Indicador,</span>
+<span id="cb27-18"><a href="#cb27-18" aria-hidden="true" tabindex="-1"></a>      <span class="at">BDI =</span> <span class="st">"Depresión"</span>,</span>
+<span id="cb27-19"><a href="#cb27-19" aria-hidden="true" tabindex="-1"></a>      <span class="at">STAI.E =</span> <span class="st">"Ansiedad estado"</span>,</span>
+<span id="cb27-20"><a href="#cb27-20" aria-hidden="true" tabindex="-1"></a>      <span class="at">STAI.R =</span> <span class="st">"Ansiedad rasgo"</span>,</span>
+<span id="cb27-21"><a href="#cb27-21" aria-hidden="true" tabindex="-1"></a>      <span class="at">HS =</span> <span class="st">"Desesperanza"</span></span>
+<span id="cb27-22"><a href="#cb27-22" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb27-23"><a href="#cb27-23" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb27-24"><a href="#cb27-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(</span>
+<span id="cb27-25"><a href="#cb27-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(</span>
+<span id="cb27-26"><a href="#cb27-26" aria-hidden="true" tabindex="-1"></a>      <span class="at">x =</span> Cambio_actividad_categoria,</span>
+<span id="cb27-27"><a href="#cb27-27" aria-hidden="true" tabindex="-1"></a>      <span class="at">y =</span> Puntaje,</span>
+<span id="cb27-28"><a href="#cb27-28" aria-hidden="true" tabindex="-1"></a>      <span class="at">fill =</span> Cambio_actividad_categoria</span>
+<span id="cb27-29"><a href="#cb27-29" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb27-30"><a href="#cb27-30" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb27-31"><a href="#cb27-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(</span>
+<span id="cb27-32"><a href="#cb27-32" aria-hidden="true" tabindex="-1"></a>    <span class="at">show.legend =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb27-33"><a href="#cb27-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">outlier.alpha =</span> <span class="fl">0.25</span></span>
+<span id="cb27-34"><a href="#cb27-34" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb27-35"><a href="#cb27-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(</span>
+<span id="cb27-36"><a href="#cb27-36" aria-hidden="true" tabindex="-1"></a>    <span class="sc">~</span>Indicador,</span>
+<span id="cb27-37"><a href="#cb27-37" aria-hidden="true" tabindex="-1"></a>    <span class="at">scales =</span> <span class="st">"free_y"</span></span>
+<span id="cb27-38"><a href="#cb27-38" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb27-39"><a href="#cb27-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb27-40"><a href="#cb27-40" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Salud mental según cambio en la actividad física"</span>,</span>
+<span id="cb27-41"><a href="#cb27-41" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Cambio en la actividad física"</span>,</span>
+<span id="cb27-42"><a href="#cb27-42" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Puntaje"</span></span>
+<span id="cb27-43"><a href="#cb27-43" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb27-44"><a href="#cb27-44" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="trabajoFinal_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Tabla según aislamiento</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>resumen_aislamiento <span class="ot">&lt;-</span> datos_limpio <span class="sc">%&gt;%</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>    Aislamiento,</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>    BDI,</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>    STAI.E,</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>    STAI.R,</span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>    HS</span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">cols =</span> <span class="fu">c</span>(BDI, STAI.E, STAI.R, HS),</span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">"Indicador"</span>,</span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">"Puntaje"</span></span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">Indicador =</span> <span class="fu">recode</span>(</span>
+<span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a>      Indicador,</span>
+<span id="cb28-17"><a href="#cb28-17" aria-hidden="true" tabindex="-1"></a>      <span class="at">BDI =</span> <span class="st">"Depresión"</span>,</span>
+<span id="cb28-18"><a href="#cb28-18" aria-hidden="true" tabindex="-1"></a>      <span class="at">STAI.E =</span> <span class="st">"Ansiedad estado"</span>,</span>
+<span id="cb28-19"><a href="#cb28-19" aria-hidden="true" tabindex="-1"></a>      <span class="at">STAI.R =</span> <span class="st">"Ansiedad rasgo"</span>,</span>
+<span id="cb28-20"><a href="#cb28-20" aria-hidden="true" tabindex="-1"></a>      <span class="at">HS =</span> <span class="st">"Desesperanza"</span></span>
+<span id="cb28-21"><a href="#cb28-21" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb28-22"><a href="#cb28-22" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb28-23"><a href="#cb28-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Aislamiento, Indicador) <span class="sc">%&gt;%</span></span>
+<span id="cb28-24"><a href="#cb28-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb28-25"><a href="#cb28-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">n =</span> <span class="fu">sum</span>(<span class="sc">!</span><span class="fu">is.na</span>(Puntaje)),</span>
+<span id="cb28-26"><a href="#cb28-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">Media =</span> <span class="fu">mean</span>(Puntaje, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb28-27"><a href="#cb28-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">Mediana =</span> <span class="fu">median</span>(Puntaje, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb28-28"><a href="#cb28-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">DE =</span> <span class="fu">sd</span>(Puntaje, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb28-29"><a href="#cb28-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
+<span id="cb28-30"><a href="#cb28-30" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb28-31"><a href="#cb28-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-32"><a href="#cb28-32" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
+<span id="cb28-33"><a href="#cb28-33" aria-hidden="true" tabindex="-1"></a>  resumen_aislamiento,</span>
+<span id="cb28-34"><a href="#cb28-34" aria-hidden="true" tabindex="-1"></a>  <span class="at">digits =</span> <span class="dv">2</span>,</span>
+<span id="cb28-35"><a href="#cb28-35" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">"Salud mental según modalidad de aislamiento"</span></span>
+<span id="cb28-36"><a href="#cb28-36" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Salud mental según modalidad de aislamiento</caption>
+<colgroup>
+<col style="width: 41%">
+<col style="width: 23%">
+<col style="width: 5%">
+<col style="width: 8%">
+<col style="width: 11%">
+<col style="width: 8%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Aislamiento</th>
+<th style="text-align: left;">Indicador</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">Media</th>
+<th style="text-align: right;">Mediana</th>
+<th style="text-align: right;">DE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Retornó a una rutina normal</td>
+<td style="text-align: left;">Ansiedad estado</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: right;">18.81</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">10.30</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Retornó a una rutina normal</td>
+<td style="text-align: left;">Ansiedad rasgo</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: right;">21.45</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">10.68</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Retornó a una rutina normal</td>
+<td style="text-align: left;">Depresión</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: right;">10.55</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">8.34</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Retornó a una rutina normal</td>
+<td style="text-align: left;">Desesperanza</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: right;">3.44</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3.88</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Aislamiento parcial</td>
+<td style="text-align: left;">Ansiedad estado</td>
+<td style="text-align: right;">49</td>
+<td style="text-align: right;">18.02</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">11.80</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Aislamiento parcial</td>
+<td style="text-align: left;">Ansiedad rasgo</td>
+<td style="text-align: right;">49</td>
+<td style="text-align: right;">18.59</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">10.44</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Aislamiento parcial</td>
+<td style="text-align: left;">Depresión</td>
+<td style="text-align: right;">49</td>
+<td style="text-align: right;">8.22</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">8.03</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Aislamiento parcial</td>
+<td style="text-align: left;">Desesperanza</td>
+<td style="text-align: right;">49</td>
+<td style="text-align: right;">2.96</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3.91</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Comenzó a salir por trabajo</td>
+<td style="text-align: left;">Ansiedad estado</td>
+<td style="text-align: right;">191</td>
+<td style="text-align: right;">22.86</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">11.64</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Comenzó a salir por trabajo</td>
+<td style="text-align: left;">Ansiedad rasgo</td>
+<td style="text-align: right;">191</td>
+<td style="text-align: right;">22.82</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">10.34</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Comenzó a salir por trabajo</td>
+<td style="text-align: left;">Depresión</td>
+<td style="text-align: right;">191</td>
+<td style="text-align: right;">12.23</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">9.14</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Comenzó a salir por trabajo</td>
+<td style="text-align: left;">Desesperanza</td>
+<td style="text-align: right;">191</td>
+<td style="text-align: right;">3.50</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3.50</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">No realiza aislamiento</td>
+<td style="text-align: left;">Ansiedad estado</td>
+<td style="text-align: right;">514</td>
+<td style="text-align: right;">22.28</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">11.62</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">No realiza aislamiento</td>
+<td style="text-align: left;">Ansiedad rasgo</td>
+<td style="text-align: right;">514</td>
+<td style="text-align: right;">22.55</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">10.71</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">No realiza aislamiento</td>
+<td style="text-align: left;">Depresión</td>
+<td style="text-align: right;">514</td>
+<td style="text-align: right;">12.62</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">8.95</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">No realiza aislamiento</td>
+<td style="text-align: left;">Desesperanza</td>
+<td style="text-align: right;">514</td>
+<td style="text-align: right;">3.52</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3.61</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Aislamiento total</td>
+<td style="text-align: left;">Ansiedad estado</td>
+<td style="text-align: right;">214</td>
+<td style="text-align: right;">23.98</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">13.72</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Aislamiento total</td>
+<td style="text-align: left;">Ansiedad rasgo</td>
+<td style="text-align: right;">214</td>
+<td style="text-align: right;">24.33</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">12.28</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Aislamiento total</td>
+<td style="text-align: left;">Depresión</td>
+<td style="text-align: right;">214</td>
+<td style="text-align: right;">14.30</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">11.02</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Aislamiento total</td>
+<td style="text-align: left;">Desesperanza</td>
+<td style="text-align: right;">214</td>
+<td style="text-align: right;">4.21</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4.26</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Gráfico según aislamiento</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>datos_limpio <span class="sc">%&gt;%</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Aislamiento, BDI, STAI.E, STAI.R, HS) <span class="sc">%&gt;%</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">cols =</span> <span class="fu">c</span>(BDI, STAI.E, STAI.R, HS),</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">"Indicador"</span>,</span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">"Puntaje"</span></span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">Indicador =</span> <span class="fu">recode</span>(</span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>      Indicador,</span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">BDI =</span> <span class="st">"Depresión"</span>,</span>
+<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a>      <span class="at">STAI.E =</span> <span class="st">"Ansiedad estado"</span>,</span>
+<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a>      <span class="at">STAI.R =</span> <span class="st">"Ansiedad rasgo"</span>,</span>
+<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a>      <span class="at">HS =</span> <span class="st">"Desesperanza"</span></span>
+<span id="cb29-15"><a href="#cb29-15" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb29-16"><a href="#cb29-16" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb29-17"><a href="#cb29-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(</span>
+<span id="cb29-18"><a href="#cb29-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(</span>
+<span id="cb29-19"><a href="#cb29-19" aria-hidden="true" tabindex="-1"></a>      <span class="at">x =</span> Aislamiento,</span>
+<span id="cb29-20"><a href="#cb29-20" aria-hidden="true" tabindex="-1"></a>      <span class="at">y =</span> Puntaje,</span>
+<span id="cb29-21"><a href="#cb29-21" aria-hidden="true" tabindex="-1"></a>      <span class="at">fill =</span> Aislamiento</span>
+<span id="cb29-22"><a href="#cb29-22" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb29-23"><a href="#cb29-23" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb29-24"><a href="#cb29-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb29-25"><a href="#cb29-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(</span>
+<span id="cb29-26"><a href="#cb29-26" aria-hidden="true" tabindex="-1"></a>    <span class="sc">~</span>Indicador,</span>
+<span id="cb29-27"><a href="#cb29-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">scales =</span> <span class="st">"free_y"</span></span>
+<span id="cb29-28"><a href="#cb29-28" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb29-29"><a href="#cb29-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb29-30"><a href="#cb29-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Salud mental según modalidad de aislamiento"</span>,</span>
+<span id="cb29-31"><a href="#cb29-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Modalidad de aislamiento"</span>,</span>
+<span id="cb29-32"><a href="#cb29-32" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Puntaje"</span></span>
+<span id="cb29-33"><a href="#cb29-33" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb29-34"><a href="#cb29-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb29-35"><a href="#cb29-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb29-36"><a href="#cb29-36" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(</span>
+<span id="cb29-37"><a href="#cb29-37" aria-hidden="true" tabindex="-1"></a>      <span class="at">angle =</span> <span class="dv">35</span>,</span>
+<span id="cb29-38"><a href="#cb29-38" aria-hidden="true" tabindex="-1"></a>      <span class="at">hjust =</span> <span class="dv">1</span></span>
+<span id="cb29-39"><a href="#cb29-39" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb29-40"><a href="#cb29-40" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="trabajoFinal_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Entre los participantes con mediciones válidas, 449 disminuyeron su actividad física, 400 la mantuvieron y 147 la aumentaron. Quienes redujeron su actividad presentaron mayores puntajes medios de depresión (13,49), ansiedad estado (23,43) y ansiedad rasgo (23,34) que quienes la mantuvieron o aumentaron. Sin embargo, la desesperanza no siguió el mismo patrón, ya que el grupo que mantuvo su actividad presentó la media más elevada (3,82). En cuanto al aislamiento, las personas que realizaron aislamiento total mostraron las medias más altas en depresión (14,30), ansiedad estado (23,98), ansiedad rasgo (24,33) y desesperanza (4,21), mientras que quienes realizaron aislamiento parcial presentaron las medias más bajas. En conjunto, los resultados sugieren una asociación descriptiva entre la reducción de actividad, el aislamiento más restrictivo y algunos indicadores menos favorables de salud mental. Sin embargo, no permiten establecer causalidad y deben interpretarse considerando las diferencias de tamaño y composición entre los grupos.</p>
+</section>
+</section>
+<section id="aplicación-shiny" class="level1">
+<h1>Aplicación Shiny</h1>
+<p>Para complementar el análisis exploratorio, hicimos un dashboard interactivo con Shiny para poder ver las relaciones entre los indicadores de salud mental y las principales variables de contexto.</p>
+<p>La app permite elegir el indicador y la variable de cruce, seleccionar que grupos especificos comparar y visualizar tanto el grafico de proporciones como la tabla resumen y la distribucion general del indicador en toda la muestra. Asi, se puede reproducir de forma dinamica cualquiera de los cruces presentados en el Analisis Exploratorio y explorar combinaciones diferentes no incluidas explicitamente en el documento.</p>
+<p>La aplicación esta disponible en: <a href="https://smacedosanchez.shinyapps.io/saludmentaldurantecovid19/" class="uri">https://smacedosanchez.shinyapps.io/saludmentaldurantecovid19/</a></p>
+</section>
+<section id="conclusiones" class="level1">
+<h1>Conclusiones</h1>
+<p>En conjunto, los resultados muestran una presencia relevante de indicadores de problemas de salud mental durante la pandemia: el 37,6 % de los participantes presentó algún nivel de sintomatología depresiva —18,1 % leve, 12,3 % moderada y 7,1 % grave—, mientras que el 14,8 % se ubicó en el rango clínico de ansiedad estado y el 16,3 % en el de ansiedad rasgo; además, el 11,4 % presentó niveles moderados o altos de desesperanza. Descriptivamente, las mujeres mostraron mayores puntajes de depresión y ansiedad que los varones, mientras que los residentes del interior presentaron valores ligeramente superiores a los de Montevideo en los cuatro indicadores. El nivel socioeconómico se asoció de forma negativa, débil y estadísticamente significativa con la depresión, la ansiedad y la desesperanza, lo que indica una tendencia hacia menores niveles de sintomatología a medida que aumenta el INSE. Asimismo, quienes redujeron su actividad física presentaron mayores niveles medios de depresión y ansiedad, y quienes realizaron aislamiento total mostraron los valores más elevados en los cuatro indicadores de salud mental. No obstante, estos resultados deben interpretarse con cautela debido al carácter transversal del estudio, al muestreo no probabilístico, a la sobrerrepresentación de mujeres y residentes de Montevideo y a las diferencias de composición entre los grupos; por consiguiente, las asociaciones observadas no permiten establecer relaciones causales ni generalizar directamente los resultados a toda la población uruguaya.</p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

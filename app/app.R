@@ -3,7 +3,7 @@ library(shinydashboard)
 library(tidyverse)
 library(plotly)
 
-# --- Carga y preparación de datos (mismo procesamiento que el .qmd) ---
+# --- Carga y preparación de datos ---
 datos_limpio <- read_csv("datos_limpios.csv", show_col_types = FALSE) %>%
   mutate(
     Sexo = factor(Sexo, levels = c(0, 1), labels = c("Mujer", "Varón")),
@@ -50,10 +50,10 @@ agrupadores <- c("Sexo" = "Sexo",
 
 # --- UI ---
 ui <- dashboardPage(
-  
+  #Titulo
   dashboardHeader(title = "Salud mental durante COVID-19",
                   titleWidth = 300),
-  
+  #Sidebar con los grupos a elegir
   dashboardSidebar(
     width = 300,
     selectInput("indicador", "Indicador de salud mental:",
@@ -61,6 +61,7 @@ ui <- dashboardPage(
     selectInput("agrupador", "Cruzar con:",
                 choices = agrupadores),
     uiOutput("selector_grupos"),
+    #Sidebar para elegir que grafico ver
     sidebarMenu(
       menuItem("Comparación por grupo", tabName = "comparacion", icon = icon("chart-bar")),
       menuItem("Resumen y distribución", tabName = "resumen", icon = icon("table"))
@@ -68,6 +69,7 @@ ui <- dashboardPage(
   ),
   
   dashboardBody(
+    #Evita que el texto se corte o se trunque
       tags$head(
         tags$style(HTML("
         .main-header .logo {
@@ -77,7 +79,7 @@ ui <- dashboardPage(
         }
       "))
       ),
-    
+    #Graficos y tabla
     tabItems(
       tabItem(tabName = "comparacion",
               fluidRow(
@@ -104,7 +106,7 @@ ui <- dashboardPage(
 # --- Server ---
 server <- function(input, output) {
   
-  # Selector dinámico: los checkboxes cambian según la variable de agrupación elegida
+  # Selector dinamico para elegir grupo
   output$selector_grupos <- renderUI({
     niveles <- datos_limpio %>%
       pull(all_of(input$agrupador)) %>%
@@ -113,7 +115,7 @@ server <- function(input, output) {
     checkboxGroupInput("grupos_seleccionados", "Grupos a mostrar:",
                        choices = niveles, selected = niveles)
   })
-  
+  #datos para mostrar lo que elige el usuario
   datos_filtrados <- reactive({
     req(input$grupos_seleccionados)
     
@@ -123,7 +125,7 @@ server <- function(input, output) {
              grupo %in% input$grupos_seleccionados) %>%
       mutate(grupo = fct_drop(grupo))
   })
-  
+  #grafico de categoria vs grupo
   output$barras <- renderPlotly({
     p <- datos_filtrados() %>%
       count(grupo, categoria) %>%
@@ -142,7 +144,7 @@ server <- function(input, output) {
     ggplotly(p)
   })
   
-  # Tabla centrada en los grupos: una fila por grupo, columnas = categorías del indicador
+  # Tabla de resumen
   output$tabla_resumen <- renderTable({
     base <- datos_filtrados()
     
@@ -159,7 +161,7 @@ server <- function(input, output) {
       left_join(totales, by = "grupo") %>%
       rename(!!names(agrupadores)[agrupadores == input$agrupador] := grupo)
   })
-  
+  #grafico de distribucion general
   output$distribucion_general <- renderPlotly({
     p <- datos_limpio %>%
       select(categoria = all_of(input$indicador)) %>%

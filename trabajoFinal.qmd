@@ -9,13 +9,27 @@ author: Hugo Selma, Santiago Macedo
 
 El fenomeno de interés que elegimos para estudiar en este trabajo es la salud mental de personas durante la pandemia (2020). Se exploraran las posibles relaciones que existen entre su salud mental, medida por varias escalas psicologicas como el BDI, STAI, etc, con ciertas caracteristicas de su estilo de vida, nivel socioeconomico, lugar de residencia, etc.
 
+El estudio se realizó a través de un formulario online que circuló por redes sociales, páginas institucionales de la UdelaR, y se difundió a través de medios de prensa. Se realizaron las gestiones pertinentes ante el Comité de Ética en Investigación de la FP-UdelaR, obteniéndose las aprobaciones correspondientes.
+
+La recogida de datos se realizó entre el 30/5 y el 20/7 del 2020, obteniéndose un total de 1059 respuestas. Se convocó a participar a personas residentes en Uruguay de 18 años o más, que no tuvieran patologías psiquiátricas graves, discapacidad intelectual o intentos de suicidio recientes. A las mismas, se les aplicó un cuestionario online que evaluaba diversas variables sociodemográficas, condiciones en las vive la pandemia, condiciones de la vivienda, convivientes, patologías asociadas a mayor riesgo de COVID, actividades que realiza, nivel educativo, consumo de sustancias, entre otras. Además, se aplicaron diversos instrumentos estandarizados: INSE (Índice de nivel socioeconómico), BDI-II (Inventario de depresión de Beck), STAI (Inventario de ansiedad estado-rasgo) y HS (Escala de desesperanza), entre otras.
+
+Dichas escalas evalúan el nivel socioeconómico, síntomas de depresión, síntomas de ansiedad (actual y a medio plazo), y la desesperanza que es un predictor de riesgo suicida. De la enorme cantidad de variables estudiadas, se hará un recorte adecuado al trabajo que estamos realizando.
+
 El objetivo del trabajo es describir los indicadores de depresión, ansiedad y desesperanza observados en una muestra de adultos durante la pandemia de COVID-19 y explorar su relación con características sociodemográficas, socioeconómicas, condiciones de aislamiento y cambios en la actividad física.
 
 Una vez descritas las principales características de la muestra, el análisis se organiza en torno a cuatro preguntas. En primer lugar, se examina la distribución de los puntajes de depresión, ansiedad y desesperanza, así como la proporción de participantes incluida en cada categoría clínica. A continuación, se exploran posibles diferencias según sexo y zona de residencia. En tercer lugar, se analiza la relación entre el nivel socioeconómico y los indicadores de salud mental. Finalmente, se estudia la relación de estos indicadores con los cambios en la actividad física y con la modalidad de aislamiento.
 
-Se analizan 4 escalas que evalúan síntomas psicopatológicos, relacionados con problemas de salud mental de gran prevalencia (depresión -BDI- y ansiedad -STAI.E y STAI.R) así como la escala de desesperanza que es un predictor de riesgo suicida (HS).
+Se analizan 4 escalas que evalúan síntomas psicopatológicos, relacionados con problemas de salud mental de gran prevalencia (depresión -BDI- y ansiedad estado y rasgo -STAI.E y STAI.R) así como la escala de desesperanza que es un predictor de riesgo suicida (HS). Luego además, se establece una categorización de dichos puntajes en función de su significación clínica, a saber:
 
-Para los análisis de intensidad y asociación se utilizan los puntajes de las escalas (BDI, STAI.E, STAI.R y HS), debido a que conservan toda la variabilidad de las respuestas. Las variables categorizadas se utilizan para describir la proporción de participantes ubicada en los diferentes niveles clínicos. Estas categorías representan niveles de sintomatología derivados de escalas de autorreporte y no equivalen, por sí solas, a un diagnóstico clínico.
+- BDI-Cat: 0, sin depresión; 1, depresión clínica.
+
+- STAI.E.Cat: 0, ansiedad "normal"; 1, ansiedad en rango clínico.
+
+- STAI.R.Cat: 0, ansiedad "normal"; 1, ansiedad en rango clínico.
+
+- HS.Cat: 0, Ninguna; 1 leve; 2, moderada; 3 alta.
+
+los análisis de intensidad y asociación se utilizan los puntajes de las escalas (BDI, STAI.E, STAI.R y HS), debido a que conservan toda la variabilidad de las respuestas. Las variables categorizadas se utilizan para describir la proporción de participantes ubicada en los diferentes niveles clínicos. Estas categorías representan niveles de sintomatología derivados de escalas de autorreporte y no equivalen, por sí solas, a un diagnóstico clínico.
 
 Buscaremos responder a las siguientes preguntas:
 
@@ -30,6 +44,8 @@ Buscaremos responder a las siguientes preguntas:
 En el siguiente chunk cargamos las librerias necesarias para poder correr el código:
 
 ```{r}
+#| message: false
+#| warning: false
 library(tidyverse)
 library(readxl)
 library(plotly)
@@ -47,7 +63,7 @@ La base original contenía 1.059 respuestas y 375 variables. Para proteger la pr
 Entre ellas tenemos:
 
 | Variable | Tipo | Descripción |
-|----|----|----|
+|------------------------|------------------------|------------------------|
 | **Demografía** |  |  |
 | `Sexo` | Categórica (0/1) | Sexo del participante |
 | `Edad` | Numérica | Edad en años |
@@ -80,7 +96,7 @@ Entre ellas tenemos:
 | `Asma`, `EPOC`, `Hipertension`, `Cardiacas`, `Diabetes`, `Inmunodepresion`, `Trastornos.mentales`, `Ninguna` | Dummy (0/1) c/u | Condiciones de salud autorreportadas |
 | **Variables de resultado — salud mental** |  |  |
 | `BDI` | Numérica (0-63) | Puntaje total del Inventario de Depresión de Beck |
-| `BDI.Cat` | Categórica ordinal | Categoría de severidad de depresión (mínima/leve/moderada/severa) |
+| `BDI.Cat` | Categórica ordinal | Categoría de depresión (sin depresión o depresión en rango clínico) |
 | `STAI.E` | Numérica (0-60) | Puntaje de ansiedad estado (STAI) |
 | `STAI.E.Cat` | Categórica ordinal | Categoría de ansiedad estado (normal o clínica) |
 | `STAI.R` | Numérica (0-60) | Puntaje de ansiedad rasgo (STAI) |
@@ -671,7 +687,7 @@ ggplot(
   theme_minimal()
 ```
 
-El nivel socioeconómico presentó correlaciones negativas y estadísticamente significativas con los cuatro indicadores de salud mental: depresión (ρ=−0,160\rho=-0{,}160ρ=−0,160), ansiedad estado (ρ=−0,152\rho=-0{,}152ρ=−0,152), ansiedad rasgo (ρ=−0,164\rho=-0{,}164ρ=−0,164) y desesperanza (ρ=−0,164\rho=-0{,}164ρ=−0,164); en todos los casos, p\<0,001p\<0{,}001p\<0,001. Esto indica que un mayor nivel socioeconómico tendió a asociarse con menores puntajes de depresión, ansiedad y desesperanza. No obstante, todas las correlaciones fueron débiles, por lo que el nivel socioeconómico explica solamente una parte reducida de las diferencias observadas en salud mental. Debido al carácter transversal y observacional de los datos, los resultados tampoco permiten establecer que el nivel socioeconómico sea la causa directa de estas diferencias.
+El nivel socioeconómico presentó correlaciones negativas y estadísticamente significativas con los cuatro indicadores de salud mental: depresión (rho = -0,160), ansiedad estado (rho = -0,152), ansiedad rasgo (rho = -0,164) y desesperanza (rho = -0,164); en todos los casos, p \< 0,001. Esto indica que un mayor nivel socioeconómico tendió a asociarse con menores puntajes de depresión, ansiedad y desesperanza. No obstante, todas las correlaciones fueron débiles, por lo que el nivel socioeconómico explica solamente una parte reducida de las diferencias observadas. Debido al carácter transversal y observacional de los datos, no puede establecerse una relación causal.
 
 #### 4. Actividad física, aislamiento y salud mental
 
@@ -772,6 +788,7 @@ datos_limpio %>%
     STAI.R,
     HS
   ) %>%
+  filter(!is.na(Cambio_actividad_categoria)) %>%
   pivot_longer(
     cols = c(BDI, STAI.E, STAI.R, HS),
     names_to = "Indicador",
@@ -793,7 +810,10 @@ datos_limpio %>%
       fill = Cambio_actividad_categoria
     )
   ) +
-  geom_boxplot(show.legend = FALSE) +
+  geom_boxplot(
+    show.legend = FALSE,
+    outlier.alpha = 0.25
+  ) +
   facet_wrap(
     ~Indicador,
     scales = "free_y"
@@ -893,3 +913,15 @@ datos_limpio %>%
 ```
 
 Entre los participantes con mediciones válidas, 449 disminuyeron su actividad física, 400 la mantuvieron y 147 la aumentaron. Quienes redujeron su actividad presentaron mayores puntajes medios de depresión (13,49), ansiedad estado (23,43) y ansiedad rasgo (23,34) que quienes la mantuvieron o aumentaron. Sin embargo, la desesperanza no siguió el mismo patrón, ya que el grupo que mantuvo su actividad presentó la media más elevada (3,82). En cuanto al aislamiento, las personas que realizaron aislamiento total mostraron las medias más altas en depresión (14,30), ansiedad estado (23,98), ansiedad rasgo (24,33) y desesperanza (4,21), mientras que quienes realizaron aislamiento parcial presentaron las medias más bajas. En conjunto, los resultados sugieren una asociación descriptiva entre la reducción de actividad, el aislamiento más restrictivo y algunos indicadores menos favorables de salud mental. Sin embargo, no permiten establecer causalidad y deben interpretarse considerando las diferencias de tamaño y composición entre los grupos.
+
+# Aplicación Shiny
+
+Para complementar el análisis exploratorio, hicimos un dashboard interactivo con Shiny para poder ver las relaciones entre los indicadores de salud mental y las principales variables de contexto.
+
+La app permite elegir el indicador y la variable de cruce, seleccionar que grupos especificos comparar y visualizar tanto el grafico de proporciones como la tabla resumen y la distribucion general del indicador en toda la muestra. Asi, se puede reproducir de forma dinamica cualquiera de los cruces presentados en el Analisis Exploratorio y explorar combinaciones diferentes no incluidas explicitamente en el documento.
+
+La aplicación esta disponible en: <https://smacedosanchez.shinyapps.io/saludmentaldurantecovid19/>
+
+# Conclusiones
+
+En conjunto, los resultados muestran una presencia relevante de indicadores de problemas de salud mental durante la pandemia: el 37,6 % de los participantes presentó algún nivel de sintomatología depresiva —18,1 % leve, 12,3 % moderada y 7,1 % grave—, mientras que el 14,8 % se ubicó en el rango clínico de ansiedad estado y el 16,3 % en el de ansiedad rasgo; además, el 11,4 % presentó niveles moderados o altos de desesperanza. Descriptivamente, las mujeres mostraron mayores puntajes de depresión y ansiedad que los varones, mientras que los residentes del interior presentaron valores ligeramente superiores a los de Montevideo en los cuatro indicadores. El nivel socioeconómico se asoció de forma negativa, débil y estadísticamente significativa con la depresión, la ansiedad y la desesperanza, lo que indica una tendencia hacia menores niveles de sintomatología a medida que aumenta el INSE. Asimismo, quienes redujeron su actividad física presentaron mayores niveles medios de depresión y ansiedad, y quienes realizaron aislamiento total mostraron los valores más elevados en los cuatro indicadores de salud mental. No obstante, estos resultados deben interpretarse con cautela debido al carácter transversal del estudio, al muestreo no probabilístico, a la sobrerrepresentación de mujeres y residentes de Montevideo y a las diferencias de composición entre los grupos; por consiguiente, las asociaciones observadas no permiten establecer relaciones causales ni generalizar directamente los resultados a toda la población uruguaya.
